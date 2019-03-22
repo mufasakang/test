@@ -161,50 +161,56 @@ $("#news-container1").vTicker({
  <strong>(편집자 주 : VIP프리미엄 번호는 무작위 번호가 아닌 VIP로또만의 '특허출원한 AI 마이닝 시스템'으로 10가지의 패턴필터링을 한 예상번호이다.) </strong> 로또 1등, 더이상 꿈이 아닌 현실이 될 수 있다. 이번주 로또 1등의 주인공은 바로 당신이다. </td>
         </tr>
         <tr>
-                <td class="body_txt">
-                    <a id="db"></a>
-                     <input name="INVEN" value="미파악됨" type="hidden">
-        			<input type="hidden" value="mobile7" wform="Y" wname="PAGE" c="STR" />
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td><img src="m_img7/db_title.png" width="100%" /></td>
-                        </tr>
-                        <tr>
-                            <td style="padding:10px; background:#0083fb;" class="db_box">
-                                <div style="background:#0083fb; padding:5px 10px;">
-                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                                        <tr>
-                                            <td width="20%">이름</td>
-                                            <td><input type="text" maxlength="10" wform="Y" wname="NAME" c="STR" style="width:70%; height:30px" /></td>
-                                        </tr>
-                                        <tr>
-                                            <td>연락처</td>
-                                            <td> <select name="tel1_Y" style="width:30%; height:25px" wform="Y" wname="PHONE" c="STR">
-                        <option value="010">010</option>
-                        <option value="011">011</option>
-                        <option value="016">016</option>
-                        <option value="017">017</option>
-                        <option value="018">018</option>
-                        <option value="019">019</option>
-                    </select> 
-                    <input name="tel2_Y" type="tel" id="textfield6" style="width:25%;height:23px" maxlength="4" wform="Y" wname="PHONE" c="NUM">
-                    <input name="tel3_Y" type="tel" id="textfield7" style="width:25%;height:23px" maxlength="4" wform="Y" wname="PHONE" c="NUM"></td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="2">
-                                                <center><a onclick="wformsend();return false;"><input type="image" src="m_img7/db_btn.png" style="width:80%" /></a></center>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                          <td colspan="2"><center><img src="m_img7/alphago_new2.gif" width="30%" /></center></td>
-                                        </tr>
-                                         <tr>
-                                          <td colspan="2"><center><img src="m_img7/alphago_new3.png" width="100%" /></center></td>
-                                        </tr>
+               <!--form-->
+
+               <tr>
+                <td align="center">
+                   <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
+                   <input type="hidden" value="mobile" wform="Y" wname="PAGE" c="STR" />
+    
+                      <div id="db" style="overflow:hidden; background:url(m_img7/form_bg.gif) no-repeat; background-size:100%; width:100%; max-width:640px; margin:auto; border-radius: 25px;">
+                            <div class="box1" style="margin:38% 10% 55% 10%;">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                <tr>
+                                    <td><div style="width:100%">
+                                     <div style="display: inline-block;width: 25%;color: #fff;text-align: center; font-size: 15px;">전화번호</div>
+                                        <div style="width: 70%;display: inline-block;margin-top: 5px;">
+                                          <span>
+                                            <select  wform="Y" wname="PHONE" c="NUM" class="input selectform1" style="width: 25%; text-align: center; color: rgb(0, 0, 0); display: inline-block; padding:5px;">
+                                              <option value="010" selected="selected">010</option>
+                                              <option value="011">011</option>
+                                              <option value="016">016</option>
+                                              <option value="017">017</option>
+                                              <option value="018">018</option>
+                                              <option value="019">019</option>
+                                            </select>
+                                          </span>
+                                          <input type="hidden" value="-" wform="Y" wname="PHONE" c="STR">
+                                          <span><input type="tel" class="input inputform2" maxlength="4" wform="Y" wname="PHONE" c="NUM" style="width: 25%; text-align: center; color: rgb(0, 0, 0); display: inline-block; padding:5px;"></span>
+                                          <input type="hidden" value="-" wform="Y" wname="PHONE" c="STR">
+                                          <span style="margin:0"><input type="tel" class="input inputform2" maxlength="4" wform="Y" wname="PHONE" c="NUM" style="width: 25%; text-align: center; color: rgb(0, 0, 0); display: inline-block; padding:5px;"></span>
+                                        </div>
+                                      </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div style="color:#fff;font-size: 14px;text-align: center;padding-top:5px;padding-bottom: 10px;line-height: 14px;">
+                                      100% 무료이며, 서비스 외에 어떤 용도로도 사용하지 않습니다.
+                                    </div>
+                                  </td>
+                                </tr>
+                                </tbody>
+                                </table>
+                                <div>
+                                    <center><a onclick="wformsend('Y');return false;"><img style="border: currentColor; border-image: none; width:100%; cursor:pointer;" src="m_img2/btn3.gif"></a></center>
+                                </div>
+                            </div>
+                        </div>
+                                                      
+              </tr>
+            <!--form end-->
                                     </table>
                                 </div>
                             </td>
