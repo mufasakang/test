@@ -1,0 +1,74 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0px;
+	background:url(../img/top_bg.jpg) repeat-x;
+	font-family:"맑은 고딕";
+	font-size:12px;
+	line-height:16px
+}
+img {
+	border:none
+}
+.body_txt {
+	line-height:26px;
+	font-size:15px;
+	font-family:"맑은 고딕";
+	text-align:justify; word-break:break-all;
+	padding:10px 5px;
+}
+a {
+	text-decoration:none;
+	color:#000000
+}
+a:hover {
+	text-decoration:underline;
+}
+.banner1 {
+	background:url(../img/title.jpg) no-repeat;
+	background-position:center;
+	padding-left:10px;
+	font-weight:bold
+}
+.banner2 {
+	background-color:#f8f8f8;
+	border-left:1px solid #d6d6d6;
+	border-bottom:1px solid #d6d6d6;
+	border-right:1px solid #d6d6d6;
+	padding:5px 8px
+}
+.re1{color:#FF9900; font-weight:bold}
+.re2{color:#999999; font-size:11px}
+
+input,select,textarea{ border:1px solid #999999}
+.style1 {color: #FF0000}
+
+#reply_title { border:1px solid #dedede; background:#fafafa; padding:16px 22px; }
+#reply_title img { float:left; }
+.reply_txt1 { font-family:"돋움"; font-size:13px; font-weight:bold; margin-left:17px; float:left; }
+.reply_txt2 { text-align:right; font-family:"돋움"; font-size:11px; color:#666666; }
+.reply_txt2 span { color:#9d9d9d; }
+.reply_txt3 { margin-top:18px; }
+.reply_box td { border:1px solid #dddddd; }
+.box1 { background:#FFF; font-family:"돋움"; font-size:13px; padding:10px 0 0 10px; color:#666; }
+#reply { border:1px solid #dedede; padding:16px 22px; font-family:"돋움"; font-size:13px; }
+.reply_line { border-top:1px dotted #dedede; height:10px; margin:15px 0 5px 0; }
+
+.scroll { position:relative; top:220px; width:190px; padding-right:5px;}
+.scroll_txt { font-size:13px; font-family:"맑은 고딕"; font-weight:bold; color:#FFF; line-height:30px; }
+
+#news-container { width:275px; height:275px; overflow: hidden; position: relative; margin-left:3px; }
+#news-container ul { position:absolute; width:275px; height:300px; }
+#news-container ul li { width:275px; height:30px; display: list-item; }
+#news-container ul li div { float:left; }
+#news-container ul li table { border-bottom:1px solid #dedede; padding-bottom:5px; }
+
+.r_txt1 { font-family:"돋움"; font-size:13px; font-weight:bold; color:#333; }
+.r_txt2 { font-family:"돋움"; font-size:12px; color:#333; }
+
+.db_box td { font-family:"맑은 고딕"; font-size:16px; line-height:24px; padding:5px 0; font-weight:bold; }
+
+#db_form { width:640px; margin:0 auto; font-family:"맑은 고딕"; font-size:16px; font-weight:bold; }
+#db_box { border:3px solid #070702; padding:30px 15px; }
+.db_txt { font-family:"맑은 고딕"; font-size:16px; } 

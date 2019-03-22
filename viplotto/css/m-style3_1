@@ -1,0 +1,32 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* ==========================================================================
+기본 CSS 속성
+========================================================================== */
+body,h1,h2,p,div { margin:0px; padding:0px; word-break:break-all; font-family:"맑은 고딕";}
+ul, ol, dl, li { list-style:none; padding:0; margin:0;}
+a{ text-decoration:none; color:#000; }
+img { border:none;}
+
+.body_txt { padding:10px 0; font-family:"맑은 고딕"; font-size:16px; line-height:24px; text-align:justify; letter-spacing: -1px; }
+.bold_txt { padding:20px 15px; font-family:"맑은 고딕"; font-size:20px; font-weight:bold; }
+
+.db_wrap { padding:10px; border:2px solid #000;}
+.db_wrap td { font-family:"맑은 고딕"; font-size:16px; line-height:24px; padding:3px 0;}
+
+#roll_title { margin:0 auto; background:#333; font-family:"맑은 고딕"; font-size:16px; font-weight:bold; color:#FFF; padding:10px 0 7px 0; }
+#roll_title table { font-size:13px; text-align:center; padding-top:10px; }
+#news-container2 { text-align:center; width: 100%; max-width: 640px;}
+#news-container2 li { height:25px; }
+.roll_txt1 { width:70px; height:20px; background:#F36; font-size:11px; color:#FFF; margin:0 auto; border-radius:3px; } 
+
+.dot { width:20px; height:25px; text-align:center}
+
+#con { padding:10px 5px;}
+h1 { font-family:"맑은 고딕"; font-size:23px; line-height:28px; padding:5px 0;}
+h2 { font-family:"맑은 고딕"; font-size:17px; line-height:24px; font-weight:normal; padding:5px 0;}
+
+.top1{padding-bottom:7px; padding-top:7px;border-bottom:1px solid #d3d3d3}
+.top2{padding-bottom:7px; padding-top:7px;border-bottom:3px solid #3c5b19; color:#3c5b19}
+.top3{border-right:1px solid #d3d3d3; font-weight:bold; font-size:13px; color: #999999}
