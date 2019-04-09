@@ -1,0 +1,1327 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,target-densitydpi=device-dpi">
+    <title>리얼로또</title>
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <SCRIPT language="javascript" src="js/ctl_clock_lotto.js?20181031"></SCRIPT>
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//static.adand.co.kr/page.adand/js/common.js"></script>
+    <SCRIPT src="js/jquery.vticker.js" type="text/javascript"></SCRIPT>  
+
+
+    <style type="text/css">
+        body {
+            margin: 0px;
+            font-family: '맑은 고딕';
+            font-size: 16px;
+            text-align: justify;
+            word-break: break-all;
+        }
+
+        a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .top1 {
+            padding-bottom: 7px;
+            padding-top: 7px;
+            border-bottom: 1px solid #d3d3d3
+        }
+
+        .top2 {
+            padding-bottom: 7px;
+            padding-top: 7px;
+            border-bottom: 3px solid #3c5b19;
+            color: #3c5b19
+        }
+
+        .top3 {
+            font-weight: bold;
+            font-size: 13px;
+            color: #999999
+        }
+
+        .p {
+            padding: 10px;
+        }
+
+        img {
+            border: none
+        }
+
+        input,
+        select,
+        textarea {
+            border: 1px solid #999999
+        }
+
+        .body_txt {
+            font-size: 17px;
+            line-height: 27px;
+            color: #333333
+        }
+
+        .style1 {
+            color: #FF0000
+        }
+
+        .bottom_banner {
+            padding: 8px 2px 8px 12px;
+            border-bottom: 1px solid #dddddd
+        }
+
+        .bottom_banner a {
+            color: #444444
+        }
+
+        .dot {
+            width: 20px;
+            height: 25px;
+            text-align: center
+        }
+
+        .txt {
+            width: 100px;
+            height: 30px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            line-height: 15px;
+            text-align: center;
+            font-size: 12px
+        }
+
+        .banner {
+            text-align: center;
+            padding-bottom: 3px
+        }
+
+        .db td {
+            padding: 5px 0;
+        }
+
+        .txt_roll {
+            font-family: "맑은 고딕";
+            font-size: 13px;
+        }
+
+        .time_box {
+            background: #FFFFFF;
+            border: solid #000000 2px;
+            border-top-left-radius: 5px;
+            -webkit-border-top-left-radius: 5px;
+            -moz-border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-top-right-radius: 5px;
+            border-bottom-left-radius: 5px;
+            -webkit-border-bottom-left-radius: 5px;
+            -moz-border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            -webkit-border-bottom-right-radius: 5px;
+            -moz-border-bottom-right-radius: 5px;
+            padding: 8px;
+        }
+
+        #news-container2 {
+            font-family: "맑은 고딕";
+            font-size: 13px;
+        }
+
+        .flipsnap {
+            width: 300%;
+        }
+
+        .viewport {
+            margin: 0px auto;
+            width: 100%;
+            overflow: hidden;
+            padding-top: 4%;
+            padding-bottom: 4%;
+            -webkit-transform: translateZ(0);
+            position: relative;
+        }
+
+        .item {
+            width: 33.3%;
+            text-align: center;
+            color: rgb(102, 102, 102);
+            font-size: 50px;
+            margin-left: 0%;
+            float: left;
+        }
+
+        .gnb {
+            width: 100%;
+            height: 80px;
+            background: url(../image/bg_gnb.gif) repeat-x;
+            text-align: center;
+        }
+
+        .top {
+            padding: 20px 10px 50px 10px;
+        }
+
+        .top_nav {
+            padding: 0 0px;
+        }
+
+        h1 {
+            font: bold 22px "NanumGothic", dotum;
+            color: #000;
+            letter-spacing: -0.1em;
+            line-height: 1.4em;
+        }
+
+        .h1_a {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        h1 .acc {
+            font: bold 20px "NanumGothic", dotum;
+            color: #f00;
+        }
+
+        .news_title {
+            font-size: 18px;
+            color: #06C;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .sub_title {
+            font: bold 16px "NanumGothic", dotum;
+            color: #666;
+            letter-spacing: -0.1em;
+            line-height: 1.4em;
+        }
+
+        .sub_tit {
+            font-size: 14px;
+            padding: 5px 0;
+            font-weight: bold;
+        }
+
+        .contents p {
+            padding-bottom: 10px;
+        }
+
+        .fw_b {
+            font-weight: bold;
+        }
+
+        .blue {
+            color: #00F;
+        }
+
+        .red {
+            color: #F00;
+        }
+
+        .red a {
+            color: #F00;
+        }
+
+        .yellow {
+            background: #FF0;
+        }
+
+        .ta_c {
+            text-align: center;
+        }
+
+        .fz_18 {
+            font-size: 18px !important;
+        }
+
+        .fz_13 {
+            font-size: 13px !important;
+        }
+
+        .gray {
+            color: #999;
+        }
+
+        .body_txt p {
+            margin: 10px 0;
+            padding: 0 2%;
+        }
+
+        #CLOCK_PAD a {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        #CLOCK_PAD img {
+            vertical-align: middle;
+        }
+
+        /*개인정보창*/
+        .background_layer {
+            z-index: 11;
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            opacity: 0.5;
+        }
+
+        .agree_layer {
+            z-index: 12;
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #fff;
+        }
+
+        .agree_txt {
+            box-sizing: border-box;
+            overflow: auto;
+            white-space: pre-line;
+            font-size: 14px;
+            line-height: 1.6;
+            height: 100%;
+            padding: 5%;
+            border: 4px solid #ccc;
+            color: #555;
+        }
+
+        .btn_close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            border: 4px solid #ccc;
+            background: #fff;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+            color: #555;
+            padding: 4px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn_popup {
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .btn_send {
+            width: 80%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<BODY>
+    <input type="hidden" name="backurl" class="backurl" value="s">
+    <input type="hidden" name="ADID" class="ADID" value="black">
+    <input type="hidden" name="rN" class="rN" value="1">
+    <input type="hidden" name="rS" class="rS" value="1">
+    <DIV style="margin: 0px auto; width: 100%; max-width: 640px;">
+        <DIV style="bottom: 0px; position: fixed; z-index: 1;"><A href="javascript:$('#tel1_focus').focus();"><IMG
+                    width="100%" src="image/banner_box2.gif"></A></DIV>
+        <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+            <TBODY>
+                <tr>
+                    <td>
+                        <div class="top_nav">
+                            <div><img src="image/top.jpg" width="100%" />
+                            </div>
+                            <div style="padding:11px 0;">
+
+                                <DIV id="news-container2"
+                                    style="width:; height: 18px; overflow: hidden; position: relative;">
+                                    <p style="position:absolute; top:-3px; left:10px;">
+                                        <IMG src="image/icon_1.jpg">
+                                    </p>
+                                    <UL
+                                        style="margin: 0px; padding: 0px; position: absolute; left:20px; font-size:12px; text-decoration:none; line-height:1.2em;">
+                                        <LI style="margin: 0px; padding: 0px; height: 18px; display: list-item;">
+                                            <A class="anchorLink" href="javascript:;">[화제] 고추밭에 "29억"로또 당첨금 숨긴
+                                                50代농부.</A>
+                                        </LI>
+                                        <LI style="margin: 0px; padding: 0px; height: 18px; display: list-item;">
+                                            <A class="anchorLink" href="javascript:;">[화제] 로또 온라인 명당에서 찍어준 번호가 ..</A>
+                                        </LI>
+                                        <LI style="margin: 0px; padding: 0px; height: 18px; display: list-item;">
+                                            <A class="anchorLink" href="javascript:;">[화제] 로또 791억, 1등 38명 다 한 곳에서
+                                                나와..</A>
+                                        </LI>
+                                        <LI style="margin: 0px; padding: 0px; height: 18px; display: list-item;">
+                                            <A class="anchorLink" href="javascript:;">[화제] 로또번호 받고 구매못한 여자친구 살인까지..!</A>
+                                        </LI>
+                                    </UL>
+
+                                    <div style="position:absolute; top:0; right:20px; background:#fff;">
+                                </div>
+                                </DIV>
+
+                            </div>
+                            <p>
+                                <IMG src="image/navi_01.jpg" width="100%">
+                            </p>
+                        </div>
+                        <!-- 상단 타이틀 시작-->
+                        <div class="top" style="padding-bottom:0;">
+                            <h1 class="h1_a"><a style="color:#F00;">[화제]</a>로또 "고액당첨자" 급증한 이유!? 빅데이터로 <span
+                                    style="color:#F00;">1등 당첨 6자리패턴</span> 찾아내!</h1>
+                            <p class="sub_tit">
+                                - 골든번호 무료배포 이벤트! 최소 17배 당첨확률 증가...<br />
+                                - <span style="color:#F00;">특허출원 중인 Real Formation System!</span> 독자적인 기술력 인증
+                            </p>
+                        </div>
+                        <!-- 상단타이틀 끝 -->
+                    </td>
+                </tr>
+                <TR>
+                    <TD class="body_txt">
+                        <p style="margin:0 0 10px;"><IMG width="100%" src="image/body1.png"></p>
+                        <P>매주 토요일 저녁이면 이른바 '로또명당' 이라 불리는 곳에 로또 구입을 희망하는 이들로 장사진을 이룬다.</P>
+                        <p>그런데 최근 이러한 풍속도가 빠르게 급변하고 있다. 바로 통계 데이터와 여러 숫자 조합 시스템을 통해 로또 당첨 확률을 높여주는 로또분석 전문 기업이 있기 때문이다.
+                        </p>
+                        <P>특히 리얼로또는 자체 기술력인 '리얼 포메이션시스템'을 통해 숫자 하나 하나의 역할을 만들어내고 시작번호, 끝번호 출연 빈도를 산출하여 위험인자를 조기 제거하는
+                            로직으로 정밀도를 한층 더 끌어올렸다.<br><br></P>
+                        <P align="center"><A href="javascript:;"><IMG width="100%" src="image/img3-win.jpg"></A><BR>
+                            <SPAN style="color: rgb(102, 102, 102); letter-spacing: -1px; font-size: 15px;"></P>
+                        <p>
+                            우연히 <b>‘로또 1등번호 무료이벤트’</b>에 참여하여 전화번호를 남긴 후 4주간 무료번호를 받게 되었는데 <span class="blue"><b>2주만에 2등에
+                                    당첨</b></span>되었다며 감사를 표했다.
+                        </p>
+                        <p>
+                            이 당첨 인증자는 "여기서 포기하지 않고, 리얼로또 정회원으로 전환하여 다시 한번 <span class="blue"><b>'로또 1등 당첨'</b></span>의
+                            꿈을 가지게 되었다."고 한다.
+                        </p><br>
+                        <P align="center"><A href="javascript:;"><IMG width="90%" src="image/img2_1228.png"></A></P>
+                        
+                        <P>리얼로또의 '리얼 포메이션시스템'은 국내 개발자들의 오랜 연구 끝에 타 업체와 비교할 수 없는 로또당첨 조합법을 개발하였다. 더불어 시스템의 독자적인 기술력을 인정받아
+                            특허청에 특허 출원까지 완료한 상태이다.(특허 출원번호 10-2018-01457678, 10-2018-0145770)</P>
+                        
+                        <P>일반인 대상 300명 분석 번호 테스트 결과 수동 당첨 비율이 무려 17배 이상 증가했다. 즉 통계상 최대 6주 안에 1명씩은 3등 이상의 고액 당첨이 나오고 있다는
+                            뜻이다. </P>
+                        <P>현재 100% 자체 기술력으로 브랜드 가치 1위까지 단번에 오른 리얼로또에서는 특허출원 이벤트로 이번 회차 분석 번호를 아무조건 없이 100% 무료로 제공하고 있으니
+                            참여해보길 바란다. 이번 로또 당첨의 주인공이 바로 당신일 수 있다. </P>
+                    </TD>
+                </TR>
+                <TR>
+                    <TD align="center"><A id="db"></A>
+                        <!----------DB필수입력 S---------->
+
+                        <form name="form" method="post" id="app_fm" class="form">
+                            <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y">
+                            <input type="hidden" value="DBSET1" wform="Y" wname="DBSET" c="STR" />
+
+                            <DIV
+                                style="margin: auto; border: 4px solid rgb(0, 0, 0); border-image: none; width: 95%; text-align: left; color: rgb(0, 0, 0); font-size: 16px; font-weight: bold;">
+                                <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <TBODY>
+                                        <TR>
+                                            <TD><IMG width="100%" src="image/db_head.png"></TD>
+                                        </TR>
+                                        <TR>
+                                            <TD style="background: rgb(245, 239, 217); padding: 15px;">
+                                                <DIV class="time_box">
+                                                    <DIV class="photo_main">
+                                                        <DIV class="photo_main_up"><SPAN id="CLOCK_PAD"><IMG width="120"
+                                                                    src="image/c_title2.png"><A id="clock_d"><IMG
+                                                                        width="17" id="clock_d_0" style="display: none;"
+                                                                        src="image/c0.png"><IMG width="17"
+                                                                        id="clock_d_1" style="display: inline;"
+                                                                        src="image/c1.png"><IMG width="17"
+                                                                        id="clock_d_2" style="display: none;"
+                                                                        src="image/c2.png"><IMG width="17"
+                                                                        id="clock_d_3" style="display: none;"
+                                                                        src="image/c3.png"><IMG width="17"
+                                                                        id="clock_d_4" style="display: none;"
+                                                                        src="image/c4.png"><IMG width="17"
+                                                                        id="clock_d_5" style="display: none;"
+                                                                        src="image/c5.png"><IMG width="17"
+                                                                        id="clock_d_6" style="display: none;"
+                                                                        src="image/c6.png"><IMG width="17"
+                                                                        id="clock_d_7" style="display: none;"
+                                                                        src="image/c7.png"><IMG width="17"
+                                                                        id="clock_d_8" style="display: none;"
+                                                                        src="image/c8.png"><IMG width="17"
+                                                                        id="clock_d_9" style="display: none;"
+                                                                        src="image/c9.png"></A><IMG width="17"
+                                                                    src="image/c_day.png"><A id="clock_h0"><IMG
+                                                                        width="17" id="clock_h0_b"
+                                                                        style="display: none;" src="image/cb.png"><IMG
+                                                                        width="17" id="clock_h0_1"
+                                                                        style="display: inline;"
+                                                                        src="image/c1.png"><IMG width="17"
+                                                                        id="clock_h0_2" style="display: none;"
+                                                                        src="image/c2.png"></A><A id="clock_h1"><IMG
+                                                                        width="17" id="clock_h1_0"
+                                                                        style="display: inline;"
+                                                                        src="image/c0.png"><IMG width="17"
+                                                                        id="clock_h1_1" style="display: none;"
+                                                                        src="image/c1.png"><IMG width="17"
+                                                                        id="clock_h1_2" style="display: none;"
+                                                                        src="image/c2.png"><IMG width="17"
+                                                                        id="clock_h1_3" style="display: none;"
+                                                                        src="image/c3.png"><IMG width="17"
+                                                                        id="clock_h1_4" style="display: none;"
+                                                                        src="image/c4.png"><IMG width="17"
+                                                                        id="clock_h1_5" style="display: none;"
+                                                                        src="image/c5.png"><IMG width="17"
+                                                                        id="clock_h1_6" style="display: none;"
+                                                                        src="image/c6.png"><IMG width="17"
+                                                                        id="clock_h1_7" style="display: none;"
+                                                                        src="image/c7.png"><IMG width="17"
+                                                                        id="clock_h1_8" style="display: none;"
+                                                                        src="image/c8.png"><IMG width="17"
+                                                                        id="clock_h1_9" style="display: none;"
+                                                                        src="image/c9.png"></A><IMG
+                                                                    src="image/colon.png"><A id="clock_m0"><IMG
+                                                                        width="17" id="clock_m0_0"
+                                                                        style="display: none;" src="image/c0.png"><IMG
+                                                                        width="17" id="clock_m0_1"
+                                                                        style="display: inline;"
+                                                                        src="image/c1.png"><IMG width="17"
+                                                                        id="clock_m0_2" style="display: none;"
+                                                                        src="image/c2.png"><IMG width="17"
+                                                                        id="clock_m0_3" style="display: none;"
+                                                                        src="image/c3.png"><IMG width="17"
+                                                                        id="clock_m0_4" style="display: none;"
+                                                                        src="image/c4.png"><IMG width="17"
+                                                                        id="clock_m0_5" style="display: none;"
+                                                                        src="image/c5.png"></A><A id="clock_m1"><IMG
+                                                                        width="17" id="clock_m1_0"
+                                                                        style="display: none;" src="image/c0.png"><IMG
+                                                                        width="17" id="clock_m1_1"
+                                                                        style="display: none;" src="image/c1.png"><IMG
+                                                                        width="17" id="clock_m1_2"
+                                                                        style="display: none;" src="image/c2.png"><IMG
+                                                                        width="17" id="clock_m1_3"
+                                                                        style="display: none;" src="image/c3.png"><IMG
+                                                                        width="17" id="clock_m1_4"
+                                                                        style="display: none;" src="image/c4.png"><IMG
+                                                                        width="17" id="clock_m1_5"
+                                                                        style="display: none;" src="image/c5.png"><IMG
+                                                                        width="17" id="clock_m1_6"
+                                                                        style="display: none;" src="image/c6.png"><IMG
+                                                                        width="17" id="clock_m1_7"
+                                                                        style="display: none;" src="image/c7.png"><IMG
+                                                                        width="17" id="clock_m1_8"
+                                                                        style="display: inline;"
+                                                                        src="image/c8.png"><IMG width="17"
+                                                                        id="clock_m1_9" style="display: none;"
+                                                                        src="image/c9.png"></A><IMG
+                                                                    src="image/colon.png"><A id="clock_s0"><IMG
+                                                                        width="17" id="clock_s0_0"
+                                                                        style="display: none;" src="image/c0.png"><IMG
+                                                                        width="17" id="clock_s0_1"
+                                                                        style="display: none;" src="image/c1.png"><IMG
+                                                                        width="17" id="clock_s0_2"
+                                                                        style="display: none;" src="image/c2.png"><IMG
+                                                                        width="17" id="clock_s0_3"
+                                                                        style="display: inline;"
+                                                                        src="image/c3.png"><IMG width="17"
+                                                                        id="clock_s0_4" style="display: none;"
+                                                                        src="image/c4.png"><IMG width="17"
+                                                                        id="clock_s0_5" style="display: none;"
+                                                                        src="image/c5.png"></A><A id="clock_s1"><IMG
+                                                                        width="17" id="clock_s1_0"
+                                                                        style="display: none;" src="image/c0.png"><IMG
+                                                                        width="17" id="clock_s1_1"
+                                                                        style="display: none;" src="image/c1.png"><IMG
+                                                                        width="17" id="clock_s1_2"
+                                                                        style="display: none;" src="image/c2.png"><IMG
+                                                                        width="17" id="clock_s1_3"
+                                                                        style="display: none;" src="image/c3.png"><IMG
+                                                                        width="17" id="clock_s1_4"
+                                                                        style="display: none;" src="image/c4.png"><IMG
+                                                                        width="17" id="clock_s1_5"
+                                                                        style="display: none;" src="image/c5.png"><IMG
+                                                                        width="17" id="clock_s1_6"
+                                                                        style="display: none;" src="image/c6.png"><IMG
+                                                                        width="17" id="clock_s1_7"
+                                                                        style="display: inline;"
+                                                                        src="image/c7.png"><IMG width="17"
+                                                                        id="clock_s1_8" style="display: none;"
+                                                                        src="image/c8.png"><IMG width="17"
+                                                                        id="clock_s1_9" style="display: none;"
+                                                                        src="image/c9.png"></A><A id="clock_ap"><IMG
+                                                                        width="17" id="clock_ap_a"
+                                                                        style="display: none;" src="image/cam.png"><IMG
+                                                                        width="17" id="clock_ap_p"
+                                                                        style="display: none;"
+                                                                        src="image/cpm.png"></A></SPAN></DIV>
+                                                    </DIV>
+                                                </DIV>
+                                            </TD>
+                                        </TR>
+                                        <TR>
+                                            <TD>
+                                                <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                    <TBODY>
+                                                        <TR>
+                                                            <TD align="center" class="db" style="padding-top: 20px;">
+                                                                <TABLE width="90%"
+                                                                    style="text-align: left; margin:0 auto;" border="0"
+                                                                    cellspacing="0" cellpadding="0">
+                                                                    <TBODY>
+                                                                        <TR>
+                                                                            <TD>연락처&nbsp;&nbsp;
+                                                                                <SELECT  wform="Y" wname="PHONE" c="NUM" 
+                                                                             name="tel1"
+                                                                                    style="width: 20%; height: 38px;">
+                                                                                    <OPTION value="010">010</OPTION>
+                                                                                    <OPTION value="011">011</OPTION>
+                                                                                    <OPTION value="016">016</OPTION>
+                                                                                    <OPTION value="017">017</OPTION>
+                                                                                    <OPTION value="018">018</OPTION>
+                                                                                    <OPTION value="019">019</OPTION>
+                                                                                </SELECT>
+                                                                                -<input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />
+                                                                                <INPUT  wform="Y" wname="PHONE" c="NUM" name="tel2"
+                                                                                    style="width: 20%; height: 34px; background-color: rgb(255, 255, 255);"
+                                                                                    type="tel" maxlength="4">
+                                                                                -<input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />
+                                                                                <INPUT  wform="Y" wname="PHONE" c="NUM" name="tel3"
+                                                                                    style="width: 20%; height: 34px; background-color: rgb(255, 255, 255);"
+                                                                                    type="tel" maxlength="4"></TD>
+                                                                        </TR>
+                                                                        <TR>
+                                                                            <TD
+                                                                                style="font-size: 14px; text-align:center">
+                                                                                ＊ 연락처로 <SPAN
+                                                                                    style="color: rgb(255, 0, 0); font-weight: bold;">100%
+                                                                                    무료</SPAN>로 번호가 제공됩니다.<BR>
+                                                                            </TD>
+                                                                        </TR>
+                                                                        <tr>
+                                                                            <td style="padding:0;">
+                                                                                <div
+                                                                                    style="width:100%;;font-size:12px;text-align:center;">
+                                                                                    <input type="checkbox" name="agree"
+                                                                                        id="agree_checkbox1"
+                                                                                        class="custom"
+                                                                                        style="vertical-align:middle"
+                                                                                        checked="">
+                                                                                    <label for="agree_checkbox1"
+                                                                                        style="vertical-align: middle;">개인정보
+                                                                                        수집 및 활용동의(필수)</label><a
+                                                                                        class="btn_popup1"
+                                                                                        style="vertical-align: middle;">[내용보기]</a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding:0;">
+                                                                                <div
+                                                                                    style="width:100%;font-size:12px;text-align:center;">
+                                                                                    <input type="checkbox" name="agree"
+                                                                                        id="agree2_checkbox1"
+                                                                                        class="custom"
+                                                                                        style="vertical-align:middle"
+                                                                                        checked="">
+                                                                                    <label for="agree2_checkbox1"
+                                                                                        style="vertical-align: middle;">개인정보
+                                                                                        제 3자 제공동의(필수)</label><a
+                                                                                        class="btn_popup2"
+                                                                                        style="vertical-align: middle;">[내용보기]</a>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td style="padding:0;">
+                                                                                <div
+                                                                                    style="width:100%;font-size:12px;text-align:center;">
+                                                                                    <input type="checkbox" name="agree"
+                                                                                        id="sms_agree1" class="custom"
+                                                                                        style="vertical-align:middle"
+                                                                                        checked="">
+                                                                                    <label for="sms_agree1"
+                                                                                        style="vertical-align: middle;">광고성
+                                                                                        문자메세지/알림톡 수신동의(필수)</label>
+                                                                                </div>
+                                                                            </td>
+                                                                        </tr>
+                                                                    </TBODY>
+                                                                </TABLE>
+                                                            </TD>
+                                                        </TR>
+                                                        <TR>
+                                                           
+                                                                 <TD style="padding: 0px 0px 10px;text-align:center;">
+                                                                    <a onclick="wformsend('Y');return false;">
+                                                                    <img style="border: currentColor; border-image: none; width: 70%;"
+                                                                    src="image/btn01.gif"
+                                                                    ></a></TD>
+                                                        </TR>
+                                                        <TR>
+                                                            <TD style="text-align:center;"><IMG width="80%"
+                                                                    src="image/db_img02.gif"><BR>
+                                                                <IMG width="80%" src="image/db_1.gif"></TD>
+                                                        </TR>
+                                                    </TBODY>
+                                                </TABLE>
+                                            </TD>
+                                        </TR>
+                                    </TBODY>
+                                </TABLE>
+                            </DIV>
+                        </FORM>
+                    </TD>
+                </TR>
+            </TBODY>
+        </TABLE>
+        </TD>
+        </TR>
+
+        <TR>
+            <TD>&nbsp;</TD>
+        </TR>
+        <TR>
+            <TD height="70" align="center" class="p" style="width: 100%; height: 40px; padding-bottom: 5px;">
+                <TABLE width="100%" border="0" cellspacing="0" cellpadding="0" style="padding:5px;">
+                    <TBODY>
+                        <TR>
+                            <TD width="69%"
+                                style="text-align:center;padding: 10px 0px; border: 1px solid rgb(201, 201, 201); border-image: none;">
+                                <A href="javascript:;"><IMG src="image/btn1.gif"></A></TD>
+                            <TD width="1%">&nbsp;</TD>
+                            <TD
+                                style="text-align:center;padding: 10px 0px; border: 1px solid rgb(201, 201, 201); border-image: none;">
+                                <A href="javascript:;"><IMG src="image/btn2.gif"></A></TD>
+                        </TR>
+                    </TBODY>
+                </TABLE>
+            </TD>
+        </TR>
+        <TR>
+            <TD style="padding-right: 10px; padding-bottom: 10px; padding-left: 10px;">
+                <TABLE width="100%" border="0" cellspacing="0" cellpadding="0" style="padding:5px; margin-bottom:15px;">
+                    <TBODY>
+                        <TR>
+                            <TD height="70"
+                                style="text-align:center;padding: 10px; border: 1px solid rgb(201, 201, 201); border-image: none; width: 100%; height: 40px;">
+                                <TABLE width="80%" cellspacing="0" cellpadding="0">
+                                    <TBODY>
+                                        <TR>
+                                            <TD><A href="javascript:;"><IMG src="image/icon_bt1.png"></A></TD>
+                                            <TD><A href="javascript:;"><IMG src="image/icon_bt2.png"></A></TD>
+                                            <TD><A href="javascript:;"><IMG src="image/icon_bt3.png"></A></TD>
+                                            <TD><A href="javascript:;"><IMG src="image/icon_bt4.png"></A></TD>
+                                            <TD><A href="javascript:;"><IMG src="image/icon_bt5.png"></A></TD>
+                                            <TD><A href="javascript:;"><IMG src="image/icon_bt6.png"></A></TD>
+                                        </TR>
+                                    </TBODY>
+                                </TABLE>
+                            </TD>
+                        </TR>
+                    </TBODY>
+                </TABLE>
+            </TD>
+        </TR>
+        <TR>
+            <TD style="padding: 7px 0px;">
+                <TABLE width="100%" style="margin:7px 0;">
+                    <TBODY>
+                        <TR>
+                            <TD width="70%" style="padding-left: 10px; font-size: 16px; font-weight: bold;">댓글 <SPAN
+                                    style="color: rgb(255, 0, 0);">82</SPAN></TD>
+                            <TD width="30%" align="right" style="text-align:right; padding-right: 5px;"><A
+                                    href="javascript:;"><IMG width="70" src="image/write.jpg"></A></TD>
+                        </TR>
+                    </TBODY>
+                </TABLE>
+            </TD>
+        </TR>
+        <TR>
+            <TD
+                style="letter-spacing: -1px; font-size: 13px; font-weight: bold; border-top-color: rgb(169, 169, 169); border-top-width: 1px; border-top-style: solid;">
+                <TABLE width="100%" border="0" cellspacing="0" cellpadding="0"
+                    style="letter-spacing: -1px; font-size: 13px; font-weight: bold; border-top-color: rgb(169, 169, 169); border-top-width: 1px; border-top-style: solid;">
+                    <TBODY>
+                        <TR>
+                            <TD width="50%" height="37"
+                                style="text-align:center; background: rgb(247, 247, 247); border-right-color: rgb(221, 221, 221); border-bottom-color: rgb(221, 221, 221); border-right-width: 1px; border-bottom-width: 1px; border-right-style: solid; border-bottom-style: solid; vertical-align:middle;">
+                                최신순</TD>
+                            <TD width="50%"
+                                style="text-align:center; color: rgb(0, 51, 153); border-right-color: currentColor; border-bottom-color: currentColor; border-right-width: medium; border-bottom-width: medium; border-right-style: none; border-bottom-style: none; vertical-align:middle;">
+                                호감순</TD>
+                        </TR>
+                    </TBODY>
+                </TABLE>
+            </TD>
+        </TR>
+        <TR>
+            <TD
+                style="padding: 10px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(255, 255, 255);">
+                <TABLE width="100%" border="0" cellspacing="0" cellpadding="0"
+                    style="padding: 10px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(255, 255, 255);">
+                    <TBODY>
+                        <TR>
+                            <TD style="color: rgb(0, 51, 204); font-size: 15px; font-weight: bold;">wjee**** </TD>
+                        </TR>
+                        <TR>
+                            <TD style="font-size: 14px;"><A href="javascript:;">매주
+                                    로또 자동으로 하고있었는데 분석을 해서 사는게 훨씬 낫겠네요. 어차피 로또는 매주 구매할꺼니까! </A></TD>
+                        </TR>
+                        <TR>
+                            <TD
+                                style="color: rgb(119, 119, 119); letter-spacing: -1px; padding-top: 7px; font-size: 11px;">
+                                <SPAN style="color: rgb(204, 204, 204);"></SPAN>
+                                <!-- <script language="javascript">
+									var date = new Date();
+									var month = date.getMonth() + 1;
+									if(day < 10) day = '0' + day;
+									if(month < 10) month = '0' + month;
+									document.write(date.getFullYear()+"년 "+month+"월 "+date.getDate()+"일 ");
+									document.write(date.getHours()+"시 "+date.getMinutes()+"분 "+date.getSeconds()+"초 ");
+								</script> -->
+                                2019년 04월 02일 09시 15분 49초 <SPAN style="color: rgb(204, 204, 204);">|</SPAN> 신고
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD align="right" style="text-align:right; padding-top: 10px;">
+                                <DIV style="height: 30px;">
+                                    <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <TBODY>
+                                            <TR>
+                                                <TD width="60%"><IMG width="57" src="image/rere.jpg"></TD>
+                                                <TD width="23%" height="30" align="right"
+                                                    style="text-align:right; padding-right: 5px;"><A
+                                                        href="javascript:;"><IMG width="57" src="image/up1.jpg"></A>
+                                                </TD>
+                                                <TD width="17%" height="30" align="right" style="text-align:right; "><A
+                                                        href="javascript:;"><IMG width="57" src="image/down1.jpg"></A>
+                                                </TD>
+                                            </TR>
+                                        </TBODY>
+                                    </TABLE>
+                                </DIV>
+                            </TD>
+                        </TR>
+                    </TBODY>
+                </TABLE>
+            </TD>
+        </TR>
+        <TR>
+            <TD
+                style="padding: 10px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(255, 255, 255);">
+                <TABLE width="100%" border="0" cellspacing="0" cellpadding="0"
+                    style="padding: 10px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(255, 255, 255);">
+                    <TBODY>
+                        <TR>
+                            <TD style="color: rgb(0, 51, 204); font-size: 15px; font-weight: bold;">enru**** </TD>
+                        </TR>
+                        <TR>
+                            <TD style="font-size: 14px;"><A href="javascript:;">로또가
+                                    분석해서 당첨된다는 사람 들어본적 있는데..안나올 번호 미리 빼고 분석을 한다는게 굉장히 설득력 있네.. </A></TD>
+                        </TR>
+                        <TR>
+                            <TD
+                                style="color: rgb(119, 119, 119); letter-spacing: -1px; padding-top: 7px; font-size: 11px;">
+                                <SPAN style="color: rgb(204, 204, 204);"></SPAN>
+                                <!-- <script language="javascript">
+									var date = new Date();
+									var month = date.getMonth() + 1;
+									if(day < 10) day = '0' + day;
+									if(month < 10) month = '0' + month;
+									document.write(date.getFullYear()+"년 "+month+"월 "+date.getDate()+"일 ");
+									document.write(date.getHours()+"시 "+date.getMinutes()+"분 "+date.getSeconds()+"초 ");
+								</script> -->
+                                2019년 04월 03일 13시 53분 15초 <SPAN style="color: rgb(204, 204, 204);">|</SPAN> 신고
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD align="right" style="text-align:right; padding-top: 10px;">
+                                <DIV style="height: 30px;">
+                                    <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <TBODY>
+                                            <TR>
+                                                <TD width="60%"><IMG width="57" src="image/rere.jpg"></TD>
+                                                <TD width="23%" height="30" align="right"
+                                                    style="text-align:right; padding-right: 5px;"><A
+                                                        href="javascript:;"><IMG width="57" src="image/up2.jpg"></A>
+                                                </TD>
+                                                <TD width="17%" height="30" align="right" style="text-align:right;
+												"><A href="javascript:;"><IMG width="57" src="image/down2.jpg"></A></TD>
+                                            </TR>
+                                        </TBODY>
+                                    </TABLE>
+                                </DIV>
+                            </TD>
+                        </TR>
+                    </TBODY>
+                </TABLE>
+            </TD>
+        </TR>
+        <TR>
+            <TD
+                style="padding: 10px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(255, 255, 255);">
+                <TABLE width="100%" border="0" cellspacing="0" cellpadding="0"
+                    style="padding: 10px; border-bottom-color: rgb(229, 229, 229); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(255, 255, 255);">
+                    <TBODY>
+                        <TR>
+                            <TD style="color: rgb(0, 51, 204); font-size: 15px; font-weight: bold;">ndke**** </TD>
+                        </TR>
+                        <TR>
+                            <TD style="font-size: 14px;"><A href="javascript:;">여기
+                                    가입하면 무료로 번호준다네요! 사연보니까 한달도 안되서 당첨된 사람도 있는것 같은데 저도 한번 도전해보겠습니다^^ </A></TD>
+                        </TR>
+                        <TR>
+                            <TD
+                                style="color: rgb(119, 119, 119); letter-spacing: -1px; padding-top: 7px; font-size: 11px;">
+                                <SPAN style="color: rgb(204, 204, 204);"></SPAN>
+                                <!-- <script language="javascript">
+									var date = new Date();
+									var month = date.getMonth() + 1;
+									if(day < 10) day = '0' + day;
+									if(month < 10) month = '0' + month;
+									document.write(date.getFullYear()+"년 "+month+"월 "+date.getDate()+"일 ");
+									document.write(date.getHours()+"시 "+date.getMinutes()+"분 "+date.getSeconds()+"초 ");
+								</script> -->
+                                2019년 04월 04일 07시 08분 37초 <SPAN style="color: rgb(204, 204, 204);">|</SPAN> 신고
+                            </TD>
+                        </TR>
+                        <TR>
+                            <TD align="right" style="text-align:right; padding-top: 10px;">
+                                <DIV style="height: 30px;">
+                                    <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+                                        <TBODY>
+                                            <TR>
+                                                <TD width="60%"><IMG width="57" src="image/rere.jpg"></TD>
+                                                <TD width="23%" height="30" align="right"
+                                                    style="text-align:right; padding-right: 5px;"><A
+                                                        href="javascript:;"><IMG width="57" src="image/up3.jpg"></A>
+                                                </TD>
+                                                <TD width="17%" height="30" align="right" style="text-align:right; "><A
+                                                        href="javascript:;"><IMG width="57" src="image/down.jpg"></A>
+                                                </TD>
+                                            </TR>
+                                        </TBODY>
+                                    </TABLE>
+                                </DIV>
+                            </TD>
+                        </TR>
+                    </TBODY>
+                </TABLE>
+            </TD>
+        </TR>
+        <TR>
+            <TD>&nbsp;</TD>
+        </TR>
+        <TR>
+            <TD style="padding-top: 10px;">
+                <!-- 필수입력 -->
+
+                <form name="form" method="post" id="app_fm" class="form">
+                    <INPUT name="INVEN" value="미파악됨" type="hidden" wform="Y1">
+                        <input type="hidden" value="DBSET2" wform="Y1" wname="DBSET" c="STR" />
+
+                    <DIV
+                        style="margin: auto; border: 4px solid rgb(0, 0, 0); border-image: none; width: 95%; text-align: left; color: rgb(0, 0, 0); font-size: 16px; font-weight: bold;">
+                        <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <TBODY>
+                                <TR>
+                                    <TD><IMG width="100%" src="image/db_head.png"></TD>
+                                </TR>
+                                <TR>
+                                    <TD>
+                                        <TABLE width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <TBODY>
+                                                <TR>
+                                                    <TD align="center" class="db" style="padding-top: 20px;">
+                                                        <TABLE width="90%" style="text-align: left; margin:0 auto;"
+                                                            border="0" cellspacing="0" cellpadding="0">
+                                                            <TBODY>
+                                                                <TR>
+                                                                    <TD>연락처&nbsp;&nbsp;
+                                                                        <SELECT  wform="Y1" wname="PHONE" c="NUM" 
+                                                                        name="tel1"name="tel1"
+                                                                            style="width: 20%; height: 38px;">
+                                                                            <OPTION value="010">010</OPTION>
+                                                                            <OPTION value="011">011</OPTION>
+                                                                            <OPTION value="016">016</OPTION>
+                                                                            <OPTION value="017">017</OPTION>
+                                                                            <OPTION value="018">018</OPTION>
+                                                                            <OPTION value="019">019</OPTION>
+                                                                        </SELECT>
+                                                                        -<input type="hidden" value="-" wform="Y1" wname="PHONE" c="STR" />
+                                                                           <INPUT name="tel2"
+                                                                            style="width: 20%; height: 34px; background-color: rgb(255, 255, 255);"
+                                                                            type="tel" maxlength="4">
+                                                                        -<input type="hidden" value="-" wform="Y1" wname="PHONE" c="STR" />
+                                                                            <INPUT name="tel3"
+                                                                            style="width: 20%; height: 34px; background-color: rgb(255, 255, 255);"
+                                                                            type="tel" maxlength="4"></TD>
+                                                                </TR>
+                                                                <TR>
+                                                                    <TD style="font-size: 14px; text-align:center"> ＊
+                                                                        연락처로 <SPAN
+                                                                            style="color: rgb(255, 0, 0); font-weight: bold;">100%
+                                                                            무료</SPAN>로 번호가 제공됩니다.<BR>
+                                                                    </TD>
+                                                                </TR>
+                                                                <tr>
+                                                                    <td style="padding:0;">
+                                                                        <div
+                                                                            style="width:100%;font-size:12px;text-align:center;">
+                                                                            <input type="checkbox" name="agree"
+                                                                                id="agree_checkbox2" class="custom"
+                                                                                style="vertical-align:middle"
+                                                                                checked="">
+                                                                            <label for="agree_checkbox2"
+                                                                                style="vertical-align: middle;">개인정보 수집
+                                                                                및 활용동의(필수)</label><a class="btn_popup1"
+                                                                                style="vertical-align: middle;">[내용보기]</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="padding:0;">
+                                                                        <div
+                                                                            style="width:100%;font-size:12px;text-align:center;">
+                                                                            <input type="checkbox" name="agree"
+                                                                                id="agree2_checkbox2" class="custom"
+                                                                                style="vertical-align:middle"
+                                                                                checked="">
+                                                                            <label for="agree2_checkbox1"
+                                                                                style="vertical-align: middle;">개인정보 제
+                                                                                3자 제공동의(필수)</label><a class="btn_popup2"
+                                                                                style="vertical-align: middle;">[내용보기]</a>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td style="padding:0;">
+                                                                        <div
+                                                                            style="width:100%;font-size:12px;text-align:center;">
+                                                                            <input type="checkbox" name="agree"
+                                                                                id="sms_agree2" class="custom"
+                                                                                style="vertical-align:middle"
+                                                                                checked="">
+                                                                            <label for="sms_agree2"
+                                                                                style="vertical-align: middle;">광고성
+                                                                                문자메세지/알림톡 수신동의(필수)</label>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </TBODY>
+                                                        </TABLE>
+                                                    </TD>
+                                                </TR>
+                                                <TR>
+                                                    <TD align="center" style="padding: 0px 0px 10px;text-align:center;">
+                                                       <a onclick="wformsend('Y1');return false;"> <img style="border: currentColor; border-image: none; width: 70%;"
+                                                            src="image/btn01.gif" ></a> 
+                                                    </TD>
+                                                </TR>
+                                            </TBODY>
+                                        </TABLE>
+                                    </TD>
+                                </TR>
+                            </TBODY>
+                        </TABLE>
+                    </DIV>
+                </FORM>
+            </TD>
+        </TR>
+        <TR>
+            <TD height="40">&nbsp;</TD>
+        </TR>
+        <TR>
+            <TD><A href="javascript:;"><IMG style="width: 100%;" src="image/footer.gif" border="0"></A></TD>
+        </TR>
+        <TR>
+            <TD height="50" align="center" valign="top"
+                style="color: rgb(102, 102, 102); font-size: 11px; background-color: rgb(244, 244, 244);"> Copyright(c)
+                all rights reserved. </TD>
+        </TR>
+        </TBODY>
+
+        </TABLE>
+    </DIV>
+
+    <style>
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1000001;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.6);
+            /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        .modal .container {
+            padding: 10px;
+            text-align: left;
+            width: 100%;
+            margin: 20px auto;
+            background: #f6f6f6;
+        }
+
+        .modal .container2 {
+            padding: 10px;
+            text-align: left;
+            width: 100%;
+        }
+
+        .modal .imgcontainer {
+            text-align: center;
+            margin: 15px 0 12px 0;
+            position: relative;
+        }
+
+
+        .modal span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* Modal Content/Box */
+
+        /* The Close Button (x) */
+        .modal .close {
+            position: absolute;
+            right: 15px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .modal .close:hover,
+        .close:focus {
+            color: red;
+            /* 닫기버튼 오버컬러 */
+            cursor: pointer;
+        }
+
+        .modal .text-01 {
+            width: 100%;
+            height: 300px;
+            padding: 20px 15px 0 15px;
+            background-color: #f9f9f9;
+            border: 1px solid #d5d5d5;
+            box-sizing: border-box;
+            font-size: 0.7rem;
+            color: #828282;
+            font-family: sans-serif, Verdana, 'MalgunGothic', '맑은고딕';
+            resize: none;
+            /*크롬에서 크기조절안되게 막기*/
+        }
+
+        .modal .modal-content {
+            background-color: #f6f6f6;
+            margin: 5% auto 15% auto;
+            border: 1px solid #dfdedf;
+            width: 50%;
+            height: 400px;
+            padding-right: 20px
+        }
+
+        @media (max-width:600px) {
+            .modal .modal-content {
+                width: 90%;
+            }
+        }
+
+        @media (max-width:360px) {
+            .modal .modal-content {
+                width: 90%;
+            }
+
+        }
+    </style>
+
+    <div id="id01" class="modal">
+
+        <div class="modal-content animate" name="change_pw">
+            <div class="imgcontainer">
+                <h3>이용약관</h3>
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+
+            </div>
+
+            <div class="container" style="margin-top:10px;">
+
+                <textarea class="text-01">
+① 개인정보의 수집·이용목적 : 무료체험, 서비스 홍보
+
+② 수집하려는 개인정보의 항목 : 휴대전화번호
+
+③ 개인정보의 보유 및 이용기간(근거법률) : 1년, 서비스이용기간 종료 후 3년
+
+거래기록 : 5년(전자상거래 등에서의 소비자 보호에 관한 법률)
+
+④ 동의를 거부할 수 있으며, 동의 거부시 무료체험서비스가 제공되지 않습니다.
+				</textarea>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="id02" class="modal">
+        <div class="modal-content animate">
+            <form name="change_pw">
+                <div class="imgcontainer">
+                    <h3>개인정보 취급방침</h3>
+                    <span onclick="document.getElementById('id02').style.display='none'" class="close"
+                        title="Close Modal">&times;</span>
+                </div>
+
+                <div class="container" style="margin-top:10px;">
+                    <textarea class="text-01">
+① 개인정보를 제공받는 자 :
+- (주)리치리치와 이벤트 내지 마케팅 위탁계약을 체결한자
+
+② 개인정보를 제공받는 자의 개인정보 이용 목적 :
+- 상품의 소개 및 판매
+- 사은 이벤트 및 경품지급 등 고객의 편의제공
+- 시장조사 및 상품서비스 개발연구
+
+③ 제공하는 개인정보의 항목 :
+- 개인식별정보(성명, 전화번호), 동의일자
+
+④ 개인정보를 제공받는 자의 개인정보 보유 및 이용 기간 : 동의일로부터 2년
+
+⑤ 귀하는 개인(신용)정보의 선택적인 제공에 대한 동의를 거부할 수 있습니다. 다만, 관련 편의 제공, 사은행사, 상품 안내 및 무료체험서비스가 제공되지 않습니다.
+				</textarea>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    var wform_code=641;
+    
+    
+    function wformsend(grp){
+       wformreset();
+       if(grp==null){
+          grp = "Y";
+       }
+       var msgname="";
+       var data = [];
+       $("[wform="+grp+"]").each(function (){
+          try{
+             var mname = $(this).attr("wname");
+             
+             var val =$(this).val();
+    
+             if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+                val = $("[name="+$(this).attr("name")+"]:checked").val();
+    
+             }
+    
+             wformadd(mname,val);
+    
+             var c = $(this).attr("c");
+    
+             if(c==null) return;
+    
+             var csplit=c.split(/:/gi);
+    
+    
+             if(csplit[0]=="STR"){
+                if(!val){
+                   msgname+=mname+"을 입력하세요.\n";
+                }
+             }else if(csplit[0]=="NUM"){
+                if(!val || isNaN(val)){
+                   msgname+=mname+"에 숫자만 입력하세요.\n";
+                }
+             }else if(csplit[0]=="NOTNULL"){
+                if(!val){
+                   msgname+=mname+"을 입력하세요.\n";
+                }
+             }else{
+    
+             }
+          }catch(e){ alert(e)}		
+    
+       });
+    
+       if(msgname=="") {
+          // 파라미터		
+          document.writeF.mb_hp.value = $("[name=PHONE]").val().trim();
+          //document.writeF.name.value = $("[name=NAME]").val().trim(); 
+          
+          data = $("#addDB").serialize(); 
+          
+          $.ajax({
+            method: "POST",
+            url: "https://crm.adand.co.kr/form/form/add.htm",
+            data: data,
+              complete: function(xhr, status, error){
+             //alert("완료되었습니다.");
+             document.charset = "euc-kr";
+             document.writeF.submit(); 
+             // 요청 후 캐릭터셋을 원래대로 복구한다.
+             if (document.charset) {
+                document.charset = "utf-8";
+             } 
+           },
+            dataType: "text"
+          }); 	
+          
+          return false; 
+       }
+       alert(msgname);
+       return false;
+    }
+    function wformadd(name,val){
+       var input = $("<input type='hidden' name='"+name+"'/>");
+       if($("[name="+name+"]").length>0){
+          input = $($("[name="+name+"]").get(0));	
+       }
+       $(input).val(input.val()+val+"");
+       form.append(input);
+    }
+    
+    function wformreset(){
+       form.empty();
+       wformadd("referrer",document.referrer);
+       wformadd("code",wform_code);
+       wformadd("inven",$.getP('bnna18'));
+    }
+    
+    var form = $("<form  method='post' action='https://crm.adand.co.kr/form/form/add.htm' id='addDB'></form>") 
+    form.appendTo("body");
+    
+    </script>
+    <iframe src="" name="jjj"  style="display:none"></iframe>
+<!-- 여기에 php 주소를 주세요     <form name="writeF" method="post" action="https://www.naver.com/xxx.php" accept-charset="UTF-8">   -->
+    <!-- 파라미터와 벨류를 넣어주세요 -->
+    <input type="hidden" name="mb_partner" value="vlaksuga">
+    <input type="hidden" name="mb_hp" value=""/>
+    <input type="hidden" name="name" value=""/>
+    </form>
+</html>
