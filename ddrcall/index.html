@@ -121,7 +121,7 @@ $(".news-container").vTicker({
                         <td class="body_txt">또한 많은 자영업은 폐업하고 있으며 직장인들은 더 많은 수입을 얻기 위해 투잡으로 일을 하는 경우도 허다하다.</td>
                      </tr>
                      <tr>
-                        <td class="body_txt">이러한 가운데 <b>㈜깨끗한 연구소의 뚜러콜 변기/하수구 배관 전문 시공 1위 업체에서 제휴점을 모집하고 있는데 큰 배관시장 유망 아이템으로 경기를 타지 않은 평생사업으로 소자본창업, 무점포창업을 희망하는 이들에게 관심을 받고 있다.</b></td>
+                        <td class="body_txt">이러한 가운데 <b>㈜깨끗한 연구소</b>의 뚜러콜 변기/하수구 배관 전문 시공 1위 업체에서 제휴점을 모집하고 있는데 큰 배관시장 유망 아이템으로 경기를 타지 않은 평생사업으로 소자본창업, 무점포창업을 희망하는 이들에게 관심을 받고 있다.</td>
                      </tr>
  
                      <tr>
@@ -160,40 +160,48 @@ $(".news-container").vTicker({
                             </td>
                      </tr>
                     <tr> 
-                        <div class="dbform" id="dbform">
-                              <div class="imgbox"></div>
-              <form name="app_fm" class="form">
-                          <input name="INVEN" value="미파악됨" type="hidden">
-                          <input wname="FORMNAME" wform="Y" value="2번" type="hidden">
-                                  <div class="item-list">
-                                      <div class="item-row">
-                                          <label for="f1" class="label">성함</label>
-                                          <div class="field">
-                                              <input type="text" class="text" id="f1" name="wr_name" size="10" required itemname="성함" wform="Y" wname="NAME" c="STR">
-                                          </div>
-                                      </div>
-                                      <div class="item-row">
-                                          <label for="f2" class="label">연락처</label>
-                                          <div class="field">
-                                              <input type="tel" class="text" id="f2" name="wr_4" size="10" maxlength="14" telcellnum required itemname="연락처" wform="Y" wname="PHONE" c="NUM">
-                                          </div>
-                                      </div>
-                                      
-                                      </div>
-                                      <div class="item-row">
-                                          <label for="f5" class="label">희망지역</label>
-                                          <div class="field">
-                                              <input type="text" class="text" id="f5" name="wr_6" size="10" itemname="창업희망지역" placeholder="ex)강남구 삼성동" wform="Y" wname="AREA" c="STR">
-                                          </div>
-                                      </div>
-                                  </div>
-                                  
-                                      <div class="submit">
-                                          <input type="image" src="image/form_submit.jpg" class="submit-btn" value="안심한도조회" onclick="wformsend('Y');return false;">
-                                      </div>
-                                  </div>
-                              </form>
-                          </div>
+                       
+<TD>
+      <P style="margin:0;"> <a id="db"></a></P>
+      <DIV class="input_area">
+      <div class="db_wrap">
+          <input name="INVEN" value="미파악됨" type="hidden">
+          <input type="hidden" value="mobile" wform="Y" wname="PAGE" c="STR" />
+          <input type="hidden" value="new" wform="Y" wname="MODE" c="STR" />
+                  <table width="100%" style="margin:0 auto; font-size:16px;" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td>
+                         <table id="db_tb" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            
+                            <tr>
+                              
+                              </td>
+                              </tr>
+                            <tr>
+                            <div style="margin:0 auto">
+                              <TD width="35%" height="40" style="color: rgb(85, 85, 85); font-size: 16px; font-weight: bold; padding-right:15px " align="right">연락처</TD>
+                              <td>
+                                 <select style="height:30px;" wform="Y" wname="PHONE" c="STR">
+                                     <option>010</option>
+                                      <option>011</option>
+                                      <option>016</option>
+                                      <option>017</option>
+                                      <option>018</option>
+                                      <option>019</option>
+                                  </select>
+                                  <input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />
+                                  <input type="tel" style=" width:20%; height:25px;" wform="Y" wname="PHONE" c="NUM" maxlength="4"/>
+                                  <input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />
+                                  <input type="tel" style=" width:20%; height:25px;" wform="Y" wname="PHONE" c="NUM" maxlength="4"/>
+                              </td>
+                              </div>
+                            </tr>
+                            <tr>
+                             
+                              </tr>
+                          </table>
+                      </td>
+                    </tr>
                   </tr>
                            
                          <tr>
@@ -330,7 +338,7 @@ $(".news-container").vTicker({
                                           <td class="re_bg"><b>fhw**</b></td>
                                        </tr>
                                        <tr>
-                                          <td class="re_txt"><a href="#db" class="dbLink"> 앗! 방금 상담받고 왔는데.. 이거 진짜 좋은것 같아요. 다들 성공하세요!!
+                                          <td class="re_txt"><a href="#db" class="dbLink"> 앗! 방금 상담받고 왔는데.. 이거 진짜 좋은것 같아요. 전 하기로 하였습니다. 다들 성공하세요!!
                                              </a>
                                           </td>
                                        </tr>
@@ -412,52 +420,7 @@ $(".news-container").vTicker({
          </table>
       </div>
 <!--test-->
-<TD>
-   <P style="margin:0;"> <a id="db"></a><IMG style="width: 100%;" src="m-img/db_title.png"></P>
-   <DIV class="input_area">
-   <div class="db_wrap">
-       <input name="INVEN" value="미파악됨" type="hidden">
-       <input type="hidden" value="mobile" wform="Y" wname="PAGE" c="STR" />
-       <input type="hidden" value="new" wform="Y" wname="MODE" c="STR" />
-               <table width="100%" style="margin:0 auto; font-size:16px;" border="0" cellspacing="0" cellpadding="0">
-                 <tr>
-                   <td>
-                      <table id="db_tb" width="100%" border="0" cellspacing="0" cellpadding="0">
-                         <tr>					
-      <td colspan="2" style="text-align:center;color:#e9bf27;font-size:40px;height:60px; font-weight:bold"><strong>01</strong> : <strong id="min_2">00</strong> : <strong id="sec_2">00</strong></td>
-     </tr>
-                         <tr>
-                           <td colspan="2" align="center" ><img src="m-img/top_form.gif" width="100%" />
-                           </td>
-                           </tr>
-                         <tr>
-                         <div style="margin:0 auto">
-                           <TD width="35%" height="40" style="color: rgb(85, 85, 85); font-size: 16px; font-weight: bold; padding-right:15px " align="right">연락처</TD>
-                           <td>
-                              <select style="height:30px;" wform="Y" wname="PHONE" c="STR">
-                                  <option>010</option>
-                                   <option>011</option>
-                                   <option>016</option>
-                                   <option>017</option>
-                                   <option>018</option>
-                                   <option>019</option>
-                               </select>
-                               <input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />
-                               <input type="tel" style=" width:20%; height:25px;" wform="Y" wname="PHONE" c="NUM" maxlength="4"/>
-                               <input type="hidden" value="-" wform="Y" wname="PHONE" c="STR" />
-                               <input type="tel" style=" width:20%; height:25px;" wform="Y" wname="PHONE" c="NUM" maxlength="4"/>
-                           </td>
-                           </div>
-                         </tr>
-                         <tr>
-                           <td colspan="2" align="center" style="padding:10px 0">
-                              <a onclick="wformsend('Y');return false;"><input style="border:none; background-color:#FFF" type="image" src="m-img/db_btn.gif" width="90%"></a>
-                           </td>
-                           </tr>
-                       </table>
-                   </td>
-                 </tr>
-               </table>
+             
 <!--DB 작동 영역 시작-->
 <script>
       var wform_code=639;
