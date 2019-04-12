@@ -1,0 +1,207 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body,h1 { padding:0; margin:0;}
+img { border:none;}
+a { text-decoration:none; color:#000;}
+a:hover { text-decoration:underline; color:#06F;}
+
+.head_line { height:50px; border-bottom: 1px solid #828691;}
+.head_line td{ font-family:"맑은 고딕"; font-size:12px;}
+
+#body_wrap { padding-top:10px;}
+#left { padding-top:10px;}
+#left_db { background:url(../../gns/img3/left_wing_bg.png) no-repeat; width:110px; height:204px;}
+.left_db_box { padding:10px 15px;}
+.left_db_box td { padding:3px 0;}
+
+#con { padding:15px; border-left:1px solid #dedede;}
+.head_title { border-top:1px solid #dedede; border-bottom:1px solid #dedede; padding:10px 0;}
+.date { font-family:"맑은 고딕"; font-size:13px; color:#888888; line-height:26px;}
+h1 { font-family:"맑은 고딕"; font-size:19px; padding:10px 0;}
+
+.body_txt { font-family:"맑은 고딕"; font-size:16px; line-height:24px; padding:10px 0; text-align:justify; word-break:break-all;}
+
+.re_tit { font-family:"맑은 고딕"; font-size:16px; padding:5px 0; border-bottom:1px solid #dedede;}
+.re_wrap { padding:15px 0; border-bottom:1px solid #dedede;}
+.re_wrap td { font-family:"맑은 고딕"; font-size:13px; line-height:22px;}
+
+.news_box_tit { font-family:"맑은 고딕"; font-size:13px; line-height:22px; font-weight:bold;}
+.news_box_txt td { font-family:"맑은 고딕"; font-size:13px; line-height:24px; padding:3px 0;}
+
+#right { background:#fafafa; border-right:1px solid #dbdbdb; border-left:1px solid #dbdbdb;}
+.r_box { padding:10px 15px;}
+.r_box td{ font-family:"맑은 고딕"; font-size:13px; line-height:24px; padding-left:10px;}
+.r_box2 { padding:10px 15px;}
+.r_box2 td { font-family:"맑은 고딕"; font-size:12px; padding-bottom:9px; line-height:20px;}
+.r_box3 { padding:10px 15px;}
+.r_box3 td { font-family:"맑은 고딕"; font-size:13px; line-height:22px;}
+.r_box4 td{ font-family:"맑은 고딕"; font-size:13px; line-height:24px; padding-left:10px;}
+
+#footer_line { border-top:4px solid #393939; border-bottom:2px solid #393939; padding:10px 0;}
+#footer { font-family:"맑은 고딕"; font-size:13px; color:#666; padding:15px 0;}
+
+.db_wrap { background:#d42625;}
+
+/* 롤링 */
+.scroll { position:absolute; width:127px; top:550px; }
+
+
+#floatMenu{ text-align:right; position:absolute;  top:90%; right:0px; padding:0;
+margin:0; z-index:1000; }
+
+	
+	#slider3 {
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  margin: 0 auto;
+  }
+
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+  }
+
+.rslides img {
+  display: block;
+  height: auto;
+  float: left;
+  width: 100%;
+  }
+
+
+.rslides_tabs {
+  list-style: none;
+  padding: 0;
+
+  font-size: 18px;
+  list-style: none;
+  margin: 0 auto 0px;
+  max-width: 500px;
+  
+  padding-top: 10px;
+  text-align: center;
+  width: 100%;
+  }
+
+.rslides_tabs li {
+  display: inline;
+  float: none;
+  margin:0 5px 5px 0;
+  }
+
+
+.callbacks_container {
+
+  position: relative;
+  float: left;
+  width: 100%; max-width: 581px;
+  }
+
+.callbacks {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.callbacks li {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  }
+
+.callbacks img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  height: auto;
+  width: 100%;
+  border: 0;
+  }
+
+.callbacks .caption {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  font-size: 14px;
+  text-shadow: none;
+  color: #fff;
+  background: #000;
+  background: rgba(0,0,0, .8);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 20px;
+  margin: 0;
+  max-width: none;
+  font-weight:bold; font-family:맑은 고딕,Malgun Gothic,굴림;
+  }
+
+.callbacks_nav {
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 52%;
+  left: 0;
+  opacity: 0.7;
+  z-index: 3;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: transparent url("../../gns/css/img16/themes.gif") no-repeat left top;
+  margin-top: -45px;
+  }
+
+.callbacks_nav:active {
+  opacity: 1.0;
+  }
+
+.callbacks_nav.next {
+  left: auto;
+  background-position: right top;
+  right: 0;
+  }
+
+#slider3-pager a {
+  display: inline-block;
+}
+
+#slider3-pager img {
+  float: left;
+}
+
+#slider3-pager .rslides_here a {
+  background: transparent;
+  box-shadow: 0 0 0 2px #666;
+}
+
+#slider3-pager a {
+  padding: 0;
+}
+.db_wrap { padding:5px;}
+.db_wrap td { font-weight:bold; font-family:"맑은 고딕"; font-size:16px; padding:3px 0; }
