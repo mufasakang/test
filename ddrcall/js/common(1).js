@@ -211,15 +211,3 @@ function rankingit(){
 	window.open("//adv.imadrep.co.kr/event/pop/", "_blank","top=0,left=0,width="+w+",height="+h+",toolbar=0,status=0,scrollbars=1,resizable=0");
 }
 
-/* 아이콘 생성 방지 */
-oParams = getUrlParams();
-var z_no = oParams.ref;
-
-/*
-if( i ){
-	if( iconCheck(i) > 0){
-		setCookie('APP_ICON','nsapp', 1);
-	}
-}
-*/
-

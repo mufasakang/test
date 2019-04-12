@@ -4,7 +4,7 @@ if (!$('.demo').length) return;
 
 
 var flipsnap = Flipsnap('#demo-transitionDuration .flipsnap', {
-		distance: 25, 	// 100 나누기 아이템 
+		distance: 20, 
 		transitionDuration: 500
 });
 
