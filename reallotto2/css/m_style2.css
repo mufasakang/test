@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿@charset "utf-8";
 /* CSS Document */
 
@@ -46,3 +47,53 @@ body { font-family:"맑은 고딕"; font-size:14px; }
 #db_tb{padding-top:20px; border-top:none; width:100%; }
 
 
+=======
+﻿@charset "utf-8";
+/* CSS Document */
+
+body,table,td,div,p,img { margin:0px; padding:0px; border:none; }
+a { text-decoration:none; color:#000; }
+
+body { font-family:"맑은 고딕"; font-size:14px; }
+#Wrap { width:100%;max-width:600px;margin:0 auto; }
+#title_wrap { padding:10px 10px 5px 10px; border-bottom:3px solid #de0404; }
+#title { font-size:24px; font-weight:bold; line-height:30px; letter-spacing:-1px; } 
+#sub { font-size:16px; font-weight:bold; line-height:24px; padding:10px 0; color:#666; }
+
+.body_txt { padding:10px; font-size:16px; line-height:26px; text-align:justify; word-break:break-all; }
+.body_txt2 { padding:15px 0;  }
+
+#reply_title { border-top:1px solid #c6c6c6; font-size:16px; font-weight:bold; text-align:center; }
+.r_txt1 { border-right:1px solid #c6c6c6; }
+.r_txt2 { background:#dedede; }
+
+.banner_title { height:22px; color:#de0404; padding:7px; border-top:1px solid #a3a3a3; border-bottom:1px solid #a3a3a3; }
+.banner { padding:7px 10px; font-size:14px; }
+.banner td { padding:3px 0; }
+
+#footer { border-top:1px solid #d4d4d4; background:#dedede; padding:20px 10px; text-align:center; line-height:24px; }
+
+#news-container1 { width:100%; overflow: hidden; position: relative; }
+#news-container1 ul { position:absolute; left:0px; width:100%; font-family:"맑은고딕"; font-size:18px; color:#FFF; font-weight:bold  }
+#news-container1 ul li { width:100%; padding-right:10px; height:30px; line-height:30px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+#head01 { font-family:"맑은고딕"; font-size:25px; border-bottom:2px #dadada solid; padding-bottom:10px; font-weight:bold  }
+
+.db_wrap td{ font-family:"맑은 고딕"; font-size:16px; line-height:24px;}
+			.input_area { border:2px solid #c4241c; }
+			.input_form { padding:10px; margin-bottom:15px; border-bottom:1px dashed #ddd; }
+			.input_form dl { b4order-bottom:1px dashed #ddd; height:40px; }
+			.input_form dl dt { float:left; width:28%; line-height:40px; font-weight:bold; }
+			.input_form dl dt i { font-weight:bold; color:#ff0000; }
+			.input_form dl dd { float:left; width:70%; line-height:40px; }
+			.input_form dl dd input { background-color:#f3f3f3; border:1px solid #ddd; height:30px; margin-top:3px; }
+			.input_form dl dd input.input_text { width:95%; }
+			.input_form dl dd input.input_tel { width:80%; }
+			.input_form dl dd p { float:left; width:40px; margin-left:15px}
+			
+			.input_form p img { width:100%; margin-bottom:20px; }
+			
+#db_tb{padding-top:20px; border-top:none; width:100%; }
+
+
+>>>>>>> ef50283d7e558c2eb459d2c9116a9e517278c06d
