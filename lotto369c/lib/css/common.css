@@ -1,0 +1,15 @@
+.img-responsive {
+	width: 100%; display: block;
+}
+.mauto {
+	margin: 0px auto;
+}
+.footer-bottom {
+	padding: 20px 15px; text-align: center; color: rgb(147, 147, 147); font-size: 13px; border-top-color: rgb(185, 185, 185); border-top-width: 1px; border-top-style: solid; background-color: rgb(213, 213, 213);
+}
+.footer-bottom4 {
+	padding: 15px; text-align: center; color: rgb(147, 147, 147); font-size: 13px; border-top-color: rgb(185, 185, 185); border-top-width: 1px; border-top-style: solid; background-color: rgb(213, 213, 213);
+}
+.copyrights-bottom {
+	padding: 0px; color: rgb(147, 147, 147); letter-spacing: -1px; font-family: "Nanum Myeongjo","Noto Sans KR","Nanum Gothic","¸¼Àº °íµñ","Malgun Gothic","µ¸¿ò",Dotum,"±¼¸²",Gulim,Helvetica,sans-serif; font-size: 12px; font-weight: bold;
+}
