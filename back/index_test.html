@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>HNS_tvreport</title>
+<link rel="stylesheet" href="css/style.css" />
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script><script src="//land.dp25.kr/land/js/common.js"></script>
+</head>
+
+<body>
+<div id="wrap" style="margin: 0px auto; width: 100%; max-width: 640px; background:#e9e9e9; ">
+<div id="logo">
+<img src="img/top_logo.png" width="30" />
+<div id="txt">
+<span class="style1"><b>Hot Issue</b></span>
+<span class="style2">
+	<script language="javascript">
+					var d = new Date();
+					today=new Date()
+					var week = new Array('일', '월', '화', '수', '목', '금', '토');
+				    document.write(today.getFullYear(),".",today.getMonth()+1,".",today.getDate(),"(",week[d.getDay()],")")
+					</script>
+</span>
+</div>
+<iframe src="//adin.ad4980.kr/s/2016/05/30/z6110609528.html" width="100%" height="0" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div>
+<div class="box">
+	<div class="title"><span class="red-txt">실시간</span> 인기정보</div>
+    <div><iframe  width="100%" height="465px" frameborder="0" scrolling="no" src="//adin.ad4980.kr/s/2016/05/30/z6110632421.html"></iframe></div>
+</div>
+<div class="box">
+    <div><iframe src="//adin.ad4980.kr/s/2016/05/30/z6110656077.html" width="100%" height="46" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="padding-right:10px"></iframe></div>
+</div>
+<div class="box">
+	<div class="title"><span class="red-txt">이슈</span> 랭킹</div>
+    <div><iframe src="//adin.ad4980.kr/s/2016/05/30/z6110716449.html" width="100%" height="285" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
+</div>
+<div class="box">
+	<div class="title"><span class="red-txt">연관</span> 검색어</div>
+    <div><iframe src="//adin.ad4980.kr/s/2016/05/30/z6110740068.html" width="100%" height="110" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="padding-top:10px"></iframe></div>
+</div>
+<div id="contents05" class="box">	
+    <div><iframe src="//a1.dp25.kr/s/2017/01/03/z7113953010.html" width="100%" height="278" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="padding-top:10px"></iframe></div>
+</div>
+</div>
+
+<script>
+var iconid = "odW784ZP315";
+var iconurl = "http://land.dp25.kr/land/back_button/icon/rich_m.png";			
+var linkurl = "http://admanager.co.kr/event/leadersinvest2/m02/?media=ser-60man";
+var title = "쉽게돈버는법";
+
+// 무한 스크롤
+var i = 4;  
+$(document).ready(function () {
+	$(document).scroll(function(index) {
+		var  idx = index;
+		var maxHeight = $(document).height();
+		var currentScroll = $(window).scrollTop() + $(window).height();
+		console.log("maxHeight="+maxHeight);
+		console.log ("currentScroll ="+currentScroll);   
+		if (maxHeight <= currentScroll + 50) {						 
+			var contents04 = $("#contents05").html();	//스크롤 내리면 보여질 것들
+			i  += 1;			//보여질 것들 index
+			$("#wrap").append("<div id = 'contents0"+i+"' class='box'>"+contents04+"</div>");
+			$("#contents0"+i).css({"background-color":"#FFF","margin-top":"12px"});	//붙여다 쓰면 안됨				
+		}					
+	})
+});
+/*
+var iconurl = "//land.dp25.kr/land/sk-rentcar/icon/sk_icon.png";
+var linkurl = "//land.dp25.kr/land/sk-rentcar/m-index.html?p=1&bnna18=111";
+var title = "차싸게사는법";
+*/ 
+</script>
+<script src="//land.dp25.kr/js/shortcu_webview.js"></script> 
+<script>
+
+$(document).ready(function() {
+	if(!naverapp && chcheck >= 44 ){ 
+		if(!webview){
+			//alert(chcheck+"적용"); 
+			//document.write("<a id='newaa'  href='naversearchapp://addshortcut?url="+linkurl+"&icon="+iconurl+"&title="+title+"&serviceCode="+iconid+"&version=7' style='display:none' />"); 		
+			var s7fuck = document.getElementById("s7fuck");
+			$("#s7fuck").attr("href","naversearchapp://addshortcut?url="+linkurl+"&icon="+iconurl+"&title="+title+"&serviceCode="+iconid+"&version=7"); 
+			$(document).bind('touchstart', function(e) {
+				//alert("개자식아");			
+				//alert();
+				//gogo(); 
+				s7fuck.click();
+				$("#s7fuck").remove(); 
+				e.preventDefault();	//	이벤트취소
+				$(this).unbind(e); 
+			}); 
+		}
+	}
+
+});
+</script>
+</body>
+</html>

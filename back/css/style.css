@@ -1,0 +1,13 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body { margin:0px; padding:0px; }
+#logo { background:url(../img/top_bg.png) repeat-x; height:54px; color:#FFF; padding-left:10px; font-family:"맑은 고딕"; }
+#logo img { padding:7px 7px 0 0; float:left; }
+#logo style1 { padding-top:20px; float:left; width:30px; }
+#logo style2 { padding-left:8px; font-size:10px; float:left; }
+#txt { padding:12px 0 0 5px; }
+.box { margin:8px; padding:10px 8px; background:#FFF; border:1px solid #b6b5b5; }
+.box2 { margin:8px; padding:10px 3px; background:#FFF; border:1px solid #b6b5b5; }
+.title { font-family: 맑은 고딕,Malgun Gothic,굴림; font-size:14px; font-weight:bold; color:#1366cc; padding-bottom:4px; }
+#footer { text-align:center; padding:5px 0 10px 0; font-family: 맑은 고딕,Malgun Gothic,굴림; font-size:13px; color:#666; }
