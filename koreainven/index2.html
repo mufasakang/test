@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<head>
+    <title>: 뚜러콜 :</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/m-style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- library -->
+    <SCRIPT src="js/jquery.vticker.js" type="text/javascript"></SCRIPT><!-- 클릭시 자연스러운 이동 -->
+
+    <!-- vticker-->
+    <SCRIPT type="text/javascript">
+        $(function () {
+            $(".news-container").vTicker({
+                speed: 500,
+                pause: 5000,
+                animation: 'fade',
+                mousePause: true,
+                showItems: 1
+            });
+
+        });
+    </SCRIPT>
+
+    <!-- ctime -->
+    <script>
+        var cTime = new Date()
+        var oneTime = new Date(2000, 1, 1, 1, 0) - new Date(2000, 1, 1, 0, 0)
+        var targetTime = ((new Date(cTime.getFullYear(), cTime.getMonth(), cTime.getDate(), cTime.getHours()) * 1) + oneTime)
+        function disCount() {
+            showTime = new Date(targetTime - (new Date() * 1))
+            minx = zero(showTime.getMinutes())
+            secx = zero(showTime.getSeconds())
+            //min_1.innerText=minx
+            //sec_1.innerText=secx
+            min_2.innerText = minx
+            sec_2.innerText = secx
+
+
+        }
+        function zero(a) {
+            b = a * 1
+            if (b < 10) { return "0" + a }
+            else { return b; }
+        }
+        setInterval(disCount, 1000)
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div><a href="#dbform"><img src="m-img/top.jpg" width="100%" /></a></div>
+        <div class="txt_roll"><a href="#dbform"><i class="fas fa-angle-double-right"></i>하락장에서 고수익이 가능하다..</a></div>
+    </header>
+    <nav>
+        <div class="nav_menu">뉴스홈</div>
+        <div class="nav_menu imp">속보</div>
+        <div class="nav_menu">정치</div>
+        <div class="nav_menu">경제</div>
+        <div class="nav_menu">사회</div>
+        <div class="nav_menu search">
+            <div class="in_input">검색하기</div>
+        </div>
+        <div class="nav_menu btn">
+            <div class="in_btn">찾기</div>
+        </div>
+    </nav>
+    <div class="clear"></div>
+    <section>
+        <h1><span style="color:#c00000">[화제]</span> 月150벌던 20대 알바女 XX하고 <span style="color:#c00000">"28억"</span>벌어 인생역전?!</h1>
+        <h2>- "이것"으로 수개월만에 '1억' 쉽게 벌어</h2>
+        <h2>- 로또,비트코인 보다 '이것'이 요즘 대세</h2>
+        <div id="date" style="padding-left:10px; border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0;">
+            기사입력
+            <!-- 자동 날짜 입력 (뜯어옴)-->
+            <span>
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate(), " ", today.getHours(), ":", today.getMinutes())
+                </script>
+            </span>
+        </div>
+        <!-- 본문 -->
+        <div class="body_txt">
+            <p><a href="#dbform"><img src="m-img/body1.jpg" width="100%"></a></p>
+            <p align="center"> ＜김지희씨와 SNS에 올라온 인증사진＞</p>
+            <p>최근 한 재테크 관련 커뮤니티에서 평범한 20대 아르바이트생이 큰 수익을 올려 슈퍼카, 내 집 마련, 해외여행 인증샷 등 초호화 생활을 인증한 글들이 올라와 화제이다. 이 글의 주인공은 불과 몇 년 전만 해도 아르바이트를 하며 월 150만원 남짓한 월급으로 자취방 월세와 생활비, 학비를 감당하며 빠듯하게 생활하던 평범한 여대생이었다. </p>
+            <p>하지만 그녀의 인생은 단 3년 만에 바뀌었다. 현재는 개인 카페를 운영하며 여유롭게 생활을 즐기는 자산가가 되었다. 그녀는 자신의 인생역전 키워드로 <b>"고려인베스트먼트"</b>를 뽑았는데, 바로 개인 투자 맞춤형 컨설팅 덕분이라는 것이다.</p>
+            <p><a href="#dbform"><img src="m-img/body2.jpg" width="100%"></a></p>
+            <p>김지희씨는 주식에 관해서는 전혀 몰랐지만 뉴스기사와 인터넷에 자주 언급되는 "고려인베스트먼트"에서 무료로 급등주 정보를 제공해주는 이벤트를 보게되었고 매달 조금씩 모아두었던 200만원을 가지고 무료서비스를 시작하게 되었다.</p>
+            <p>첫날 받아본 추천종목을 매수하자마자 당일 최고 수익이 43%까지 올라갔고, 일주일만에 원금의 2배가 넘는 돈을 벌 수 있었다. 그렇게 꾸준히 유지한 결과, 3년만에 그녀는 이전과는 전혀 다른 호화로운 삶을 살게되었다</p>
+            <p><a href="#dbform"><img src="m-img/body3.png" width="100%"></a></p>
+            <p>고려인베스트먼트는 수익률 신기록 갱신 기념으로 <span style="color:#c00000">[VIP 3일 무료체험]</span> 이벤트를 진행한다고 밝혔다. 관계자는 새로운 파트너가 될 투자자들이 성공투자의 맛을 볼 수 있도록 신청만 해도 <span style="color:#c00000">고급추천정보를 100% 무료</span>로 제공한다며 "이번 이벤트를 통해 많은분들이 도움을 받았으면 좋겠다"고 전했다.</p>
+            
+        </div>
+        <!-- DB FORM -->
+        <div class="dbform" id="dbform">
+            <div class="imgbox"><img src="m-img/db_top_1.gif" alt=""></div>
+            <form name="app_fm" class="form">
+                <!-- hidden wname input -->
+                <input name="INVEN" value="미파악됨" type="hidden">
+                <input wname="FORMNAME" wform="Y" value="2번" type="hidden">
+
+                <div class="item-list">
+                    <div class="item-row">
+                        <label for="f1" class="label">성함</label>
+                        <div class="field">
+                            <input type="text" class="text" id="f1" name="wr_name" size="10" required="" itemname="성함"
+                                wform="Y" wname="NAME" c="STR">
+                        </div>
+                    </div>
+                    <div class="item-row">
+                        <label for="f2" class="label">연락처</label>
+                        <div class="field">
+                            <input type="tel" class="text" id="f2" name="wr_4" size="10" maxlength="14" telcellnum=""
+                                required="" itemname="연락처" wform="Y" wname="PHONE" c="NUM">
+                        </div>
+                    </div>
+                    <div class="item-row">
+                        <label for="f5" class="label">희망지역</label>
+                        <div class="field">
+                            <input type="text" class="text" id="f5" name="wr_6" size="10" itemname="창업희망지역"
+                                placeholder="ex)서울, 부산" wform="Y" wname="AREA" c="STR">
+                        </div>
+                    </div>
+                </div>
+                <div class="submit-area clr">
+                    <div class="submit">
+                        <input type="image" src="m-img/form_submit.jpg" class="submit-btn" value="안심한도조회"
+                            onclick="wformsend('Y');return false;">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- 많이 본 기사 -->
+        <div class="byline">
+            <p>많이 본 기사</p>
+            <p>▶ 자영업 폐업 속출! 전문적인 지도 필요하다</p>
+            <p>▶ 스타벅스 청소 해주는 서비스가 따로있다</p>
+            <p>▶ 국내유일 배관 전문 브랜드는 뚜러콜밖에 없어</p>
+        </div>
+    </section>
+    <footer>
+        <!-- reply box -->
+        <div class="footer_title"><img src="m-img/re_tit.png" width="100%"></div> <!-- 댓글박스 타이틀 이미지 -->
+        <!-- reply 1 -->
+        <div class="re_setbox">
+            <div class="re_bg">33op**</div> <!-- 글쓴이 -->
+            <div class="re_txt">
+                <a href="#dbform" class="dbLink">와.. 저 아시는 분이 배관청소 하면서 대박났는데.. 이거였구나</a> <!-- 댓글내용 -->
+            </div>
+            <div class="re_date">
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate() - 1)
+                </script><!-- 오른쪽에 시간 넣는곳 --><span>-19:35</span>
+            </div>
+            <div class="re_icon">
+                <div class="re_icon_left">
+                    <img src="m-img/re_3.jpg">
+
+                </div>
+                <div class="re_icon_right">
+                    <img src="m-img/re1.jpg">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- reply 2 -->
+        <div class="re_setbox">
+            <div class="re_bg">sjmwa13**</div> <!-- 글쓴이 -->
+            <div class="re_txt">
+                <a href="#dbform" class="dbLink">본사에서 모두 지원해준다니 좋은 것 같아요. 이런게 필요합니다.</a> <!-- 댓글내용 -->
+            </div>
+            <div class="re_date">
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate() - 1)
+                </script><!-- 오른쪽에 시간 넣는곳 --><span>-19:15</span>
+            </div>
+            <div class="re_icon">
+                <div class="re_icon_left">
+                    <img src="m-img/re_3.jpg">
+
+                </div>
+                <div class="re_icon_right">
+                    <img src="m-img/re2.jpg">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- reply 3 -->
+        <div class="re_setbox">
+            <div class="re_bg">moni7**</div> <!-- 글쓴이 -->
+            <div class="re_txt">
+                <a href="#dbform" class="dbLink">요즘 진짜 알바구하기도 너무 힘들다..</a> <!-- 댓글내용 -->
+            </div>
+            <div class="re_date">
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate() - 1)
+                </script><!-- 오른쪽에 시간 넣는곳 --><span>-16:04</span>
+            </div>
+            <div class="re_icon">
+                <div class="re_icon_left">
+                    <img src="m-img/re_3.jpg">
+
+                </div>
+                <div class="re_icon_right">
+                    <img src="m-img/re4.jpg">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- reply 4 -->
+        <div class="re_setbox">
+            <div class="re_bg">fhw**</div> <!-- 글쓴이 -->
+            <div class="re_txt">
+                <a href="#dbform" class="dbLink">앗! 방금 상담받고 왔는데.. 이거 진짜 좋은것 같아요. 전 하기로 하였습니다. 다들 성공하세요!!</a> <!-- 댓글내용 -->
+            </div>
+            <div class="re_date">
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate() - 1)
+                </script><!-- 오른쪽에 시간 넣는곳 --><span>-10:02</span>
+            </div>
+            <div class="re_icon">
+                <div class="re_icon_left">
+                    <img src="m-img/re_3.jpg">
+
+                </div>
+                <div class="re_icon_right">
+                    <img src="m-img/re5.gif">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- reply 5 -->
+        <div class="re_setbox">
+            <div class="re_bg">yyw2y**</div> <!-- 글쓴이 -->
+            <div class="re_txt">
+                <a href="#dbform" class="dbLink">이거 본사가 남긴하는 구조인가요?? 진짜 하나부터 열까지 다 지원해주네요.. 저도 신청하고 왔습니다!</a> <!-- 댓글내용 -->
+            </div>
+            <div class="re_date">
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate() - 1)
+                </script><!-- 오른쪽에 시간 넣는곳 --><span>-16:59</span>
+            </div>
+            <div class="re_icon">
+                <div class="re_icon_left">
+                    <img src="m-img/re_3.jpg">
+
+                </div>
+                <div class="re_icon_right">
+                    <img src="m-img/re6.jpg">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- footer info -->
+        <div class="footinfo">
+            <h2>서비스안내 | 뉴스도움말 | 문제신고</h2>
+            <p>컨텐츠의 저작권은 제공처에 있으며, 이를 무단 이용하는 경우</p>
+            <p>저작권법 등에 따라 법적책임을 질 수 있습니다.</p>
+        </div>
+    </footer>
+</body>
+<!-- vlsg db  -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//static.adand.co.kr/page.adand/js/common.js"></script>
+<script>
+        var wform_code=645;
+        
+        
+        function wformsend(grp){
+          
+          wformreset();
+          if(grp==null){
+            grp = "Y";
+          }
+          var msgname="";
+          var data = [];
+          $("[wform="+grp+"]").each(function (){
+            try{
+              var mname = $(this).attr("wname");
+              
+              var val =$(this).val();
+        
+              if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+                val = $("[name="+$(this).attr("name")+"]:checked").val();
+        
+              }
+        
+              wformadd(mname,val);
+        
+              var c = $(this).attr("c");
+        
+              if(c==null) return;
+        
+              var csplit=c.split(/:/gi);
+        
+        
+              if(csplit[0]=="STR"){
+                if(!val){
+                  msgname+=mname+"을 입력하세요.\n";
+                }
+              }else if(csplit[0]=="NUM"){
+                if(!val || isNaN(val)){
+                  msgname+=mname+"에 숫자만 입력하세요.\n";
+                }
+              }else if(csplit[0]=="NOTNULL"){
+                if(!val){
+                  msgname+=mname+"을 입력하세요.\n";
+                }
+              }else{
+        
+              }
+            }catch(e){ alert(e)}		
+        
+          });
+        
+          if(msgname=="") {
+            form.submit();	
+            return true;
+          }
+          alert(msgname);
+          return false;
+        }
+        function wformadd(name,val){
+          var input = $("<input type='hidden' name='"+name+"'/>");
+          if($("[name="+name+"]").length>0){
+            input = $($("[name="+name+"]").get(0));	
+          }
+          $(input).val(input.val()+val+" ");
+          form.append(input);
+        }
+        
+        function wformreset(){
+          form.empty();
+          wformadd("referrer",document.referrer);
+          wformadd("code",wform_code);
+          wformadd("inven",$.getP('bnna18'));
+        }
+        
+        var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm'></form>") 
+        form.appendTo("body");
+        
+         
+</script>
+      <!--DB 작동 영역 끝-->

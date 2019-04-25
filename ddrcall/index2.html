@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<head>
+    <title>: 뚜러콜 :</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="css/m-style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- library -->
+    <SCRIPT src="js/jquery.vticker.js" type="text/javascript"></SCRIPT><!-- 클릭시 자연스러운 이동 -->
+
+    <!-- vticker-->
+    <SCRIPT type="text/javascript">
+        $(function () {
+            $(".news-container").vTicker({
+                speed: 500,
+                pause: 5000,
+                animation: 'fade',
+                mousePause: true,
+                showItems: 1
+            });
+
+        });
+    </SCRIPT>
+
+    <!-- ctime -->
+    <script>
+        var cTime = new Date()
+        var oneTime = new Date(2000, 1, 1, 1, 0) - new Date(2000, 1, 1, 0, 0)
+        var targetTime = ((new Date(cTime.getFullYear(), cTime.getMonth(), cTime.getDate(), cTime.getHours()) * 1) + oneTime)
+        function disCount() {
+            showTime = new Date(targetTime - (new Date() * 1))
+            minx = zero(showTime.getMinutes())
+            secx = zero(showTime.getSeconds())
+            //min_1.innerText=minx
+            //sec_1.innerText=secx
+            min_2.innerText = minx
+            sec_2.innerText = secx
+
+
+        }
+        function zero(a) {
+            b = a * 1
+            if (b < 10) { return "0" + a }
+            else { return b; }
+        }
+        setInterval(disCount, 1000)
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div><a href="#dbform"><img src="m-img/top.jpg" width="100%" /></a></div>
+        <div class="txt_roll"><a href="#dbform"><i class="fas fa-angle-double-right"></i>요즘같은 불황이 없다..</a></div>
+    </header>
+    <nav>
+        <div class="nav_menu">뉴스홈</div>
+        <div class="nav_menu imp">속보</div>
+        <div class="nav_menu">정치</div>
+        <div class="nav_menu">경제</div>
+        <div class="nav_menu">사회</div>
+        <div class="nav_menu search">
+            <div class="in_input">검색하기</div>
+        </div>
+        <div class="nav_menu btn">
+            <div class="in_btn">찾기</div>
+        </div>
+    </nav>
+    <div class="clear"></div>
+    <section>
+        <h1><span style="color:#c00000">[화제]</span> 초기 자본금 280만원만 있으면 월수입 500만원 이상도 가능해</h1>
+        <h2>- 현재는 수요를 못 따라가 활황시장!</h2>
+        <h2>- 사업 아이템은 유행을 타면 안돼, 인건비 걱정도 없어야돼</h2>
+        <h2>- 스타벅스 매장도 이 업체가 서비스 진행하고 있어</h2>
+        <div id="date" style="padding-left:10px; border-top:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0;">
+            기사입력
+            <!-- 자동 날짜 입력 (뜯어옴)-->
+            <span>
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate(), " ", today.getHours(), ":", today.getMinutes())
+                </script>
+            </span>
+        </div>
+        <!-- 본문 -->
+        <div class="body_txt">
+            <p><a href="#dbform"><img src="m-img/body_4.PNG" width="100%"></a></p>
+            <p>요즘 우리나라에서는 여러 경제정책 변화로 인해 52시간 근로근무제, 최저임금 인상 등으로 인해 자영업자들은 계속해서 경기 불황을 호소하고
+                있다. </p>
+            <p>또한 많은 자영업은 폐업하고 있으며 직장인들은 더 많은 수입을 얻기 위해 투잡으로 일을 하는 경우도 허다하다.</p>
+            <p>이러한 가운데 <b>㈜깨끗한 연구소</b>의 뚜러콜 변기/하수구 배관 전문 시공 1위 업체에서 제휴점을 모집하고 있는데 큰 배관시장 유망 아이템으로 경기를 타지 않은 평생사업으로
+                소자본창업,
+                무점포창업을 희망하는 이들에게 관심을 받고 있다.</p>
+            <p><a href="#dbform"><img src="m-img/body_2.png" width="100%"></a></p>
+            <p>뚜러콜은 우리가 사는 곳, 생활하는 곳 어디서나 배관이 막힐 수 있는데 이를 잘 모르는 일반 소비자들에게 전문가가 직접 전국 어디서나 시공해주고 투명하고 합리적인 가격으로 수리를 받을 수
+                있는 서비스이다.</p>
+            <p>이에 뚜러콜 창업은 소자본 무점포 창업으로 초보자도 짧은 기간에 가능할 뿐 아니라 영업지원을 받을 수 있고 인건비 걱정이 없는 것이 큰 장점으로 꼽힌다.</p>
+            <p><a href="#dbform"><img src="m-img/body_1.jpg" width="100%"></a></p>
+            <p>또한 <b>본사 교육프로그램과 장비부터 마케팅까지 완벽하게 지원을 하기 때문에 부담 없이 누구나 도전할 수 있는 창업아이템으로 본사 이벤트와 오더지원 등으로 월 500만원이상 고수익이
+                    가능하다.</b></p>
+            <p>한편, 뚜러콜은 2018년 대한민국 소비자감동지수 1위에 수상한 바 있으며 성원에 힘입어 대대적 리모델링을 진행하였다.</p>
+            <p>더불어 뚜러콜 창업문의는 페이지하단의 상담신청에서 가능하며, 실제 창업주들의 성공사례도 확인해볼 수 있다. <b>현재 이러한 입소문이 퍼지면서 문의가 끊이지 않기 때문에, 먼저 상담신청을
+                    하여
+                    보다 좋은지원을 받는 것을 추천한다.</b></p>
+            <p><a href="#dbform"><img src="m-img/body_3.png" width="100%"></a></p>
+        </div>
+        <!-- DB FORM -->
+        <div class="dbform" id="dbform">
+            <div class="imgbox"><img src="m-img/form_title.jpg" alt=""></div>
+            <form name="app_fm" class="form">
+                <!-- hidden wname input -->
+                <input name="INVEN" value="미파악됨" type="hidden">
+                <input wname="FORMNAME" wform="Y" value="2번" type="hidden">
+
+                <div class="item-list">
+                    <div class="item-row">
+                        <label for="f1" class="label">성함</label>
+                        <div class="field">
+                            <input type="text" class="text" id="f1" name="wr_name" size="10" required="" itemname="성함"
+                                wform="Y" wname="NAME" c="STR">
+                        </div>
+                    </div>
+                    <div class="item-row">
+                        <label for="f2" class="label">연락처</label>
+                        <div class="field">
+                            <input type="tel" class="text" id="f2" name="wr_4" size="10" maxlength="14" telcellnum=""
+                                required="" itemname="연락처" wform="Y" wname="PHONE" c="NUM">
+                        </div>
+                    </div>
+                    <div class="item-row">
+                        <label for="f5" class="label">희망지역</label>
+                        <div class="field">
+                            <input type="text" class="text" id="f5" name="wr_6" size="10" itemname="창업희망지역"
+                                placeholder="ex)서울, 부산" wform="Y" wname="AREA" c="STR">
+                        </div>
+                    </div>
+                </div>
+                <div class="submit-area clr">
+                    <div class="submit">
+                        <input type="image" src="m-img/form_submit.jpg" class="submit-btn" value="안심한도조회"
+                            onclick="wformsend('Y');return false;">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- 많이 본 기사 -->
+        <div class="byline">
+            <p>많이 본 기사</p>
+            <p>▶ 자영업 폐업 속출! 전문적인 지도 필요하다</p>
+            <p>▶ 스타벅스 청소 해주는 서비스가 따로있다</p>
+            <p>▶ 국내유일 배관 전문 브랜드는 뚜러콜밖에 없어</p>
+        </div>
+    </section>
+    <footer>
+        <!-- reply box -->
+        <div class="footer_title"><img src="m-img/re_tit.png" width="100%"></div> <!-- 댓글박스 타이틀 이미지 -->
+        <!-- reply 1 -->
+        <div class="re_setbox">
+            <div class="re_bg">33op**</div> <!-- 글쓴이 -->
+            <div class="re_txt">
+                <a href="#dbform" class="dbLink">와.. 저 아시는 분이 배관청소 하면서 대박났는데.. 이거였구나</a> <!-- 댓글내용 -->
+            </div>
+            <div class="re_date">
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate() - 1)
+                </script><!-- 오른쪽에 시간 넣는곳 --><span>-19:35</span>
+            </div>
+            <div class="re_icon">
+                <div class="re_icon_left">
+                    <img src="m-img/re_3.jpg">
+
+                </div>
+                <div class="re_icon_right">
+                    <img src="m-img/re1.jpg">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- reply 2 -->
+        <div class="re_setbox">
+            <div class="re_bg">sjmwa13**</div> <!-- 글쓴이 -->
+            <div class="re_txt">
+                <a href="#dbform" class="dbLink">본사에서 모두 지원해준다니 좋은 것 같아요. 이런게 필요합니다.</a> <!-- 댓글내용 -->
+            </div>
+            <div class="re_date">
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate() - 1)
+                </script><!-- 오른쪽에 시간 넣는곳 --><span>-19:15</span>
+            </div>
+            <div class="re_icon">
+                <div class="re_icon_left">
+                    <img src="m-img/re_3.jpg">
+
+                </div>
+                <div class="re_icon_right">
+                    <img src="m-img/re2.jpg">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- reply 3 -->
+        <div class="re_setbox">
+            <div class="re_bg">moni7**</div> <!-- 글쓴이 -->
+            <div class="re_txt">
+                <a href="#dbform" class="dbLink">요즘 진짜 알바구하기도 너무 힘들다..</a> <!-- 댓글내용 -->
+            </div>
+            <div class="re_date">
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate() - 1)
+                </script><!-- 오른쪽에 시간 넣는곳 --><span>-16:04</span>
+            </div>
+            <div class="re_icon">
+                <div class="re_icon_left">
+                    <img src="m-img/re_3.jpg">
+
+                </div>
+                <div class="re_icon_right">
+                    <img src="m-img/re4.jpg">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- reply 4 -->
+        <div class="re_setbox">
+            <div class="re_bg">fhw**</div> <!-- 글쓴이 -->
+            <div class="re_txt">
+                <a href="#dbform" class="dbLink">앗! 방금 상담받고 왔는데.. 이거 진짜 좋은것 같아요. 전 하기로 하였습니다. 다들 성공하세요!!</a> <!-- 댓글내용 -->
+            </div>
+            <div class="re_date">
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate() - 1)
+                </script><!-- 오른쪽에 시간 넣는곳 --><span>-10:02</span>
+            </div>
+            <div class="re_icon">
+                <div class="re_icon_left">
+                    <img src="m-img/re_3.jpg">
+
+                </div>
+                <div class="re_icon_right">
+                    <img src="m-img/re5.gif">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- reply 5 -->
+        <div class="re_setbox">
+            <div class="re_bg">yyw2y**</div> <!-- 글쓴이 -->
+            <div class="re_txt">
+                <a href="#dbform" class="dbLink">이거 본사가 남긴하는 구조인가요?? 진짜 하나부터 열까지 다 지원해주네요.. 저도 신청하고 왔습니다!</a> <!-- 댓글내용 -->
+            </div>
+            <div class="re_date">
+                <script language="javascript">
+                    today = new Date()
+                    document.write(today.getFullYear(), "-", today.getMonth() + 1, "-", today.getDate() - 1)
+                </script><!-- 오른쪽에 시간 넣는곳 --><span>-16:59</span>
+            </div>
+            <div class="re_icon">
+                <div class="re_icon_left">
+                    <img src="m-img/re_3.jpg">
+
+                </div>
+                <div class="re_icon_right">
+                    <img src="m-img/re6.jpg">
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <!-- footer info -->
+        <div class="footinfo">
+            <h2>서비스안내 | 뉴스도움말 | 문제신고</h2>
+            <p>컨텐츠의 저작권은 제공처에 있으며, 이를 무단 이용하는 경우</p>
+            <p>저작권법 등에 따라 법적책임을 질 수 있습니다.</p>
+        </div>
+    </footer>
+</body>
+<!-- vlsg db  -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//static.adand.co.kr/page.adand/js/common.js"></script>
+<script>
+        var wform_code=645;
+        
+        
+        function wformsend(grp){
+          
+          wformreset();
+          if(grp==null){
+            grp = "Y";
+          }
+          var msgname="";
+          var data = [];
+          $("[wform="+grp+"]").each(function (){
+            try{
+              var mname = $(this).attr("wname");
+              
+              var val =$(this).val();
+        
+              if($(this).attr("type")=="radio" || $(this).attr("type")=="checkbox"){
+                val = $("[name="+$(this).attr("name")+"]:checked").val();
+        
+              }
+        
+              wformadd(mname,val);
+        
+              var c = $(this).attr("c");
+        
+              if(c==null) return;
+        
+              var csplit=c.split(/:/gi);
+        
+        
+              if(csplit[0]=="STR"){
+                if(!val){
+                  msgname+=mname+"을 입력하세요.\n";
+                }
+              }else if(csplit[0]=="NUM"){
+                if(!val || isNaN(val)){
+                  msgname+=mname+"에 숫자만 입력하세요.\n";
+                }
+              }else if(csplit[0]=="NOTNULL"){
+                if(!val){
+                  msgname+=mname+"을 입력하세요.\n";
+                }
+              }else{
+        
+              }
+            }catch(e){ alert(e)}		
+        
+          });
+        
+          if(msgname=="") {
+            form.submit();	
+            return true;
+          }
+          alert(msgname);
+          return false;
+        }
+        function wformadd(name,val){
+          var input = $("<input type='hidden' name='"+name+"'/>");
+          if($("[name="+name+"]").length>0){
+            input = $($("[name="+name+"]").get(0));	
+          }
+          $(input).val(input.val()+val+" ");
+          form.append(input);
+        }
+        
+        function wformreset(){
+          form.empty();
+          wformadd("referrer",document.referrer);
+          wformadd("code",wform_code);
+          wformadd("inven",$.getP('bnna18'));
+        }
+        
+        var form = $("<form  method='post' action='//crm.adand.co.kr/form/form/add.htm'></form>") 
+        form.appendTo("body");
+        
+         
+</script>
+      <!--DB 작동 영역 끝-->
