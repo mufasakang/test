@@ -1,0 +1,323 @@
+function number_format(num){
+    var num_str = num.toString();
+    var result = "";
+
+    for(var i=0; i<num_str.length; i++){
+        var tmp = num_str.length - (i+1);
+
+        if(((i%3)==0) && (i!=0))    result = ',' + result;
+        result = num_str.charAt(tmp) + result;
+    }
+
+    return result;
+}
+
+
+function phoneCheck(phoneNo){
+	var regExp = /^(01[016789]{1}|02|0[3-9]{1}[0-9]{1})-?[0-9]{3,4}-?[0-9]{4}$/;
+
+	if( !regExp.test(phoneNo) ){
+		alert("전화번호 형식이 잘못 되었습니다");
+		return false;
+	}else{
+		return true;
+	}
+}
+
+// 국번 4자리 적용
+function phoneCheck2(phoneNo){
+	var regExp = /^(01[016789]{1}|02|0[3-9]{1}[0-9]{1})([0-9]{1})?-?[0-9]{3,4}-?[0-9]{4}$/;
+
+	if( !regExp.test(phoneNo) ){
+		alert("전화번호 형식이 잘못 되었습니다");
+		return false;
+	}else{
+		return true;
+	}
+}
+
+// 가운데 4자리
+function phoneCheck3(phoneNo){
+	var regExp = /^(01[016789]{1}|02|0[3-9]{1}[0-9]{1})-?[0-9]{4}-?[0-9]{4}$/;
+
+	if( !regExp.test(phoneNo) ){
+		alert("전화번호 형식이 잘못 되었습니다");
+		return false;
+	}else{
+		return true;
+	}
+}
+
+function emailCheck(email){
+	var chk = true;
+	//var reg =/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+	var rex = "^[a-zA-Z][a-zA-Z0-9_\.\-]+@([a-zA-Z0-9-]{2,}\.)+([a-zA-Z]{2,4}|[a-zA-Z]{2}\.[a-zA-Z]{2})$";
+
+	if(!email.match(rex)){
+		chk = false;
+	}
+
+	return chk;
+}
+
+function isNumberKey(obj){
+
+	if( !( (event.keyCode >= 37 && event.keyCode<=57) || (event.keyCode >= 96 && event.keyCode <= 105)
+		|| event.keyCode == 8  || event.keyCode == 9)  ){
+		alert("숫자만 입력해주세요. ");
+		obj.value = "";
+		event.returnValue=false;
+	}
+}
+
+function isNumberKey1(obj){
+
+	if( isNaN(obj.value) ){
+		alert("숫자만 입력해주세요. 11");
+		obj.value = "";
+	}
+
+}
+
+// radio check
+function radioCheck( obj ){
+	var cnt = obj.length;
+	var res = false;
+
+	for( i = 0; i < cnt; i++ ){
+		if( obj[i].checked == true ){
+			res = true;
+			break;
+		}
+	}
+
+	return res;
+}
+
+function scrollBanner(target, h){
+
+	var speed = '1000';
+	var easing = 'swing';
+	var yPos = 0;
+	var pos = $("."+target).offset().top;
+
+
+
+	$(window).scroll(function(){
+		var scrollTop = $(document).scrollTop();
+		if( scrollTop > pos ){
+			yPos = scrollTop - pos + h;
+		}else{
+			yPos = 0;
+		}
+		$('.'+target).stop().animate({"top": yPos}, 800);
+	});
+}
+
+
+
+function getBrowserType(){
+	var agt = navigator.userAgent.toLowerCase();
+	if (agt.indexOf("chrome") != -1) return 'Chrome';
+	if (agt.indexOf("opera") != -1) return 'Opera';
+	if (agt.indexOf("staroffice") != -1) return 'Star Office';
+	if (agt.indexOf("webtv") != -1) return 'WebTV';
+	if (agt.indexOf("beonex") != -1) return 'Beonex';
+	if (agt.indexOf("chimera") != -1) return 'Chimera';
+	if (agt.indexOf("netpositive") != -1) return 'NetPositive';
+	if (agt.indexOf("phoenix") != -1) return 'Phoenix';
+	if (agt.indexOf("firefox") != -1) return 'Firefox';
+	if (agt.indexOf("safari") != -1) return 'Safari';
+	if (agt.indexOf("skipstone") != -1) return 'SkipStone';
+	if (agt.indexOf("msie") != -1) return 'Internet Explorer';
+	if (agt.indexOf("rv:11.0") != -1) return 'Internet Explorer';
+	if (agt.indexOf("netscape") != -1) return 'Netscape';
+	if (agt.indexOf("mozilla/5.0") != -1) return 'Mozilla';
+}
+
+
+function closePop(u , w  , h , sr){
+	/**
+	 * u : url
+	 * w : width
+	 * h : height
+	 * sr : scrollbars
+	 */
+
+	window.open(u, "cpop",
+	"top=0,left=0,width="+w+",height="+h+",toolbar=0,status=0,scrollbars="+sr+",resizable=0");
+}
+
+function closePop2(u ,sr){
+	/**
+	 * u : url
+	 * sr : scrollbars
+	 */
+	var w = window.document.body.offsetWidth;
+	var h = window.document.body.offsetHeight;
+
+	window.open(u, "cpop",
+	"top=0,left=0,width="+w+",height="+h+",toolbar=0,status=0,scrollbars="+sr+",resizable=0");
+}
+
+
+function setCookie(cookieName, value, exdays){
+	var exdate = new Date();
+	exdate.setDate(exdate.getDate() + exdays);
+	var cookieValue = escape(value) + ((exdays==null) ? "" : "; expires=" + exdate.toGMTString());
+	document.cookie = cookieName + "=" + cookieValue;
+}
+
+function getCookie(cookieName) {
+	cookieName = cookieName + '=';
+	var cookieData = document.cookie;
+	var start = cookieData.indexOf(cookieName);
+	var cookieValue = '';
+	if(start != -1){
+		start += cookieName.length;
+		var end = cookieData.indexOf(';', start);
+		if(end == -1)end = cookieData.length;
+		cookieValue = cookieData.substring(start, end);
+	}
+
+	return unescape(cookieValue);
+}
+/* 웹 후팝업 적용 */
+function getUrlParams() {
+    var params = {};
+    window.location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(str, key, value) { params[key] = value; });
+    return params;
+}
+
+oParams = getUrlParams();
+var z= oParams.ref;
+var filter = "win16|win32|win64|mac|macintel";
+
+
+function mediaCheck(z){
+	var is_chk = 0;
+	$.ajax({
+		type: 'GET',
+		url : '/common/media_chk.html',
+		data : 'z='+z,
+		beforeSend: function(){
+		},
+		async:false,
+		success: function(data){
+			is_chk = data;
+		}
+	});
+
+	return is_chk;
+}
+
+function rankingit(){
+	var w = window.document.body.offsetWidth;
+	var h = window.document.body.offsetHeight;
+	/*
+		window.open("http://adv.imadrep.co.kr/event/pop2/", "_blank","top=0,left=0,width="+w+",height="+h+",toolbar=0,status=0,scrollbars=1,resizable=0");
+	*/
+    
+    window.open("http://adv.imadrep.co.kr/event/pop2/", "_blank");
+}
+
+function rankingitYTN(){
+	var w = window.document.body.offsetWidth;
+	var h = window.document.body.offsetHeight;
+	
+		window.open("http://adv.imadrep.co.kr/event/pop/", "_blank");
+	
+}
+
+/* 개인 후팝업 조선 */
+
+
+
+
+/* 아이콘 생성 방지 */
+oParams = getUrlParams();
+var z_no = oParams.ref;
+var newsis_arr = [2415,2416,1784,1785,1786,2356,2045,995,1701,1712,1713,998,999,1000,1724,1725,1726,2824,2825,2826,2827,2828,2829,2830,2831,2832,2833,2834];
+
+function iconCheck(i){
+	var icon_cnt = 0;
+	for( var j =0; j< newsis_arr.length; j++ ){
+		if( i == newsis_arr[j]){
+			icon_cnt++;
+			break;
+		}
+	}
+	return icon_cnt;
+}
+if( z_no ){
+
+	var re_newsis = iconCheck(z_no);
+	if( re_newsis ){
+		if( re_newsis > 0){
+			setCookie('APP_ICON','nsapp', 1);
+		}
+	}
+}
+
+
+/* 요일 카운트 타이머 */
+// left padding
+function padding_left(s, c, n) {
+  if (! s || ! c || s.length >= n) {
+    return s;
+  }
+  var max = (n - s.length)/c.length;
+  for (var i = 0; i < max; i++) {
+    s = c + s;
+  }
+  return s;
+}
+
+// right padding
+function padding_right(s, c, n) {
+  if (! s || ! c || s.length >= n) {
+    return s;
+  }
+  var max = (n - s.length)/c.length;
+  for (var i = 0; i < max; i++) {
+    s += c;
+  }
+  return s;
+}
+
+function getDdayView(d){
+	var arr = d.split("-");
+
+	var getYear = arr[0];
+	var getMonth = arr[1];
+	var getDay = arr[2];
+	var viewSec = "";
+
+	var dat1 = new Date();
+	var dat2 = new Date(getYear, getMonth-1, getDay);
+
+	var diff = dat2 - dat1;
+
+	var currSec = 1000; // 밀리세컨
+	var currMin = 60 * 1000;
+	var currHour = 60 * 60 * 1000;
+	var currDay = 24 * 60 * 60 * 1000;
+
+	var day = parseInt(diff/currDay);
+	var hour = parseInt(diff/currHour);
+	var min = parseInt(diff/currMin);
+	var sec = parseInt(diff/currSec);
+
+	var viewHour = hour-(day*24);
+	var viewMin = min-(hour*60);
+	var viewSec = sec-(min*60);
+
+ 	viewHour = ( viewHour < 10 ) ? '0'+viewHour : viewHour;
+ 	viewMin = ( viewMin < 10 ) ? '0'+viewMin : viewMin;
+ 	viewSec = ( viewSec < 10 ) ? '0'+viewSec : viewSec;
+
+	viewSec = padding_left(viewSec, '0', 2)
+
+	var viewStr = day+"일 "+viewHour+" : "+viewMin+" : "+viewSec;
+	document.getElementById('dateView').innerHTML = "<span><b>"+viewStr+"</b></span>";
+}

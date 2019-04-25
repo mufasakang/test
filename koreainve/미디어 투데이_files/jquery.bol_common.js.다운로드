@@ -1,0 +1,38 @@
+// 숫자만입력
+$('.only-number').keyup(function () { 
+    this.value = this.value.replace(/[^0-9]/g,'');
+});
+
+$(document).ready(function(){
+    $('.privacy').hide();
+    $('.toggle_down').click(function(){
+        $('.privacy').slideToggle();
+    });
+	$(function() {
+		$('a[href*="#"]:not([href="#"])').click(function() {
+			if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+				if (target.length) {
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	});
+});
+
+
+//  window.onload = function(){
+//	var current = document.location.pathname + window.location.search;
+//	var replaceBack = 'http://ph-investment.com/bridge2';
+//	history.replaceState({ data: replaceBack }, document.title , replaceBack); 
+//    history.pushState({ data: 0 }, document.title , current);   
+//	}
+//   window.addEventListener('popstate', function () {
+//        if(history.state.data){
+//			window.location.replace(history.state.data); 
+//        }   
+//  });

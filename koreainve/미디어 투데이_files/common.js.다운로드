@@ -1,0 +1,7 @@
+function request(namere, url) {
+    if (!url) url = window.location.href+"&"+namere+"=";
+    namere = namere.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + namere + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    return results[2];
+}
