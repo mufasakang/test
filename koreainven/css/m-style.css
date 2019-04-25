@@ -180,7 +180,7 @@ h2 {
 /* 입력폼2 */
 .dbform .text,
 .dbform .textarea,
-.dbform .select { width: 100%; padding: 2px 5px; border: 1px solid #b0b0b0; background: #fff; background-image: none !important; height: 50px; box-sizing: border-box; }
+.dbform .select { width: 100%; padding: 2px 5px; border: 1px solid #b0b0b0; background: #fff; background-image: none !important; height: 45px; box-sizing: border-box; }
 .dbform .textarea { height: 140px; resize: none; }
 .dbform .select { padding: 2px 0; }
 
@@ -204,7 +204,7 @@ h2 {
 .dbform .dash { display: inline-block; width: 8%; text-align: center; }
 
 /* 폼하단,처리 */
-.dbform .submit-area { clear: both; margin-left: 120px; }
+.dbform .submit-area { clear: both; margin-left: 17%; }
 .dbform .agree { }
 .dbform .agree .agree-label { display: inline-block; vertical-align: middle; }
 .dbform .agree .agree-label input { width: 16px; height: 16px; margin: 0 5px 0 0; }
