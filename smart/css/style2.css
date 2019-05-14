@@ -1,0 +1,18 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+* { margin:0px; padding:0px; }
+img { border:none; }
+a { text-decoration:none; color:#000; }
+
+#wrap { width:839px; margin:0 auto; }
+#db_form { background:#081c32; padding:10px; }
+#db_box { width:390px; margin:0 auto; padding:25px 0; }
+#db_box td { padding-bottom:10px; }
+.db_txt { font-family:"맑은 고딕"; font-size:16px; font-weight:bold; color:#FFF; width:130px; }
+
+#db_box2 { background:#142a41; padding:20px 0px; margin-top:20px; }
+#db_box3 { width:500px; margin:0 auto; font-family:"맑은 고딕"; font-size:16px; font-weight:bold; color:#FFF; }
+.db_txt2 { font-size:13px; font-weight:bold; color:#d31450; text-align:center; line-height:18px; margin:10px 0; }
+.db_txt3 { font-size:13px; text-align:center; line-height:18px; margin-bottom:10px; }
+#db_btn2 { margin-top:20px; }
