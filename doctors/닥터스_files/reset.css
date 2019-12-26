@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/* 공통속성 */
+*{margin: 0;	padding: 0;	border: 0;	outline: 0;letter-spacing:-0.05em;}
+
+
+/* remember to define focus styles! */
+
+:focus {outline: 0;}
+
+body {font-family:'맑은고딕',MalgunGothic, sans-serif; color:#333; font-weight:normal;line-height:1.5em; font-size:13px; height:100%;}
+
+ol, ul {list-style: none;}
+
+
+img {margin-top:5%;border:none; vertical-align:top; width:100%}
+.mg0 img {margin:0;}
+
+a {text-decoration: none; color: inherit}
+
+
+/* tables still need 'cellspacing="0"' in the markup */
+
+table {border-collapse: separate; border-spacing: 0;}
+
+caption, th, td {text-align: left;}
+
+
+body {letter-spacing: -1px}
+input[type="text"],input[type="tel"], textarea, select {width: 90%; box-sizing: border-box; padding-left:5px; border: 1px solid #ccc !important;line-height: 34px; height:34px; border-radius: 5px}
+input[type="radio"] {/* Double-sized Checkboxes */
+-ms-transform: scale(1); /* IE */
+-moz-transform: scale(1); /* FF */
+-webkit-transform: scale(1); /* Safari and Chrome */
+-o-transform: scale(1); /* Opera */
+width:auto; height: auto;font-size: 24px}
+.que {font-size:1.2em; font-weight: 600;padding-bottom:10px}
+.que2 {font-size:1.2em; font-weight: 600;padding:30px 0 10px 0}
+p {padding:30px 5%  0;font-size:1.2em; color:#111;font-weight: normal;line-height: 1.8em;font-size:16px; word-break:keep-all}
+h1 {text-align: center;font-size:1.75em;line-height: 130%; font-weight: bold;padding:7%;padding-bottom:0; word-break:keep-all}
+@media (max-width:500px) {
+h1 { font-size:1.3em}
+}
+table label {font-size:14px; cursor:pointer;}
+.red {color:#f00}
+#db,
+#db2 {width:95%; margin:auto;}
+#db table,
+#db2 table {padding:5%;width:100%;}
+#db table td {width:25%;}
+
+input[type="image"] {border:none; border-radius:0;width:100%;}
+
+.w95 {width:95%; margin:auto;}
+.agree {display:none;background:#fff;position:fixed; top:50%; left:50%; margin-left:-150px; margin-top:-200px;width:300px; height:300px; box-shadow:5px 53px 15px rgba(0,0,0,0.5)}
+.agree_wrap {color:#464646}
+.title_wrap {height:30px; line-height:30px;}
+.close {width:100%; font-size:13px; color:#fff; padding:5px 0; background:#ff3e3e; text-align:center;}
+.agree textarea{width:100%; height:240px;resize:none;border:none;overflow-x:hidden;padding:10px;line-height:1.6em;background:#ddd}

@@ -1,0 +1,103 @@
+ function fwrite_submit(f)
+    {
+      var   regNumber = /^[0-9]*$/;
+      var pattern = /^[가-힣]{2,4}$/;
+      var eleCount = f.elements.length;
+      var ctl = null;
+      for(var i=0; i<eleCount; i++){
+         ctl = f.elements[i];
+         if(ctl.title!=""){
+             res = ctl.title;
+            if(ctl.value=="") {
+               alert(res + ' : 필수입력 항목입니다.');
+               ctl.focus();
+               return false;
+            } // end if
+         } // end if
+      } // end for
+	
+	 if(f.wr_agree.checked == false){
+         alert("필수항목 체크하셔야 합니다.");
+            f.wr_agree.focus();
+         return false;
+      }
+
+
+   }
+
+ function addDashMem(check){
+	  var check_string = check.value;
+	  var check_string = check_string.replace(/[^0-9]/g,'');
+	  var len = check_string.length;
+	  if (len >= 1 && check_string.substr(0,1) == '1'){
+          if (len >= 5 && len <= 7){
+			var subA = check_string.substr(0,4);
+		    var subF = check_string.substr(4,4);
+		    check.value = subA + "-" + subF;
+	     }
+		 else if (len >= 8){
+		    var subA = check_string.substr(0,4);
+		    var subF = check_string.substr(4,4);
+		    check.value = subA + "-" + subF;
+	     }
+	     else{
+		    check.value = check_string;
+	     }
+	  }
+	  else if (len >= 2 && check_string.substr(0,2) == '02'){
+         if (len >= 3 && len <= 5){
+			var subA = check_string.substr(0,2);
+		    var subF = check_string.substr(2,3);
+		    check.value = subA + "-" + subF;
+	     }
+		 else if (len >= 6 && len <= 9){
+			var subA = check_string.substr(0,2);
+		    var subF = check_string.substr(2,3);
+			var subB = check_string.substr(5,4);
+		    check.value = subA + "-" + subF + "-" + subB;
+	     }
+	     else if (len >= 10){
+		    var subA = check_string.substr(0,2);
+		    var subF = check_string.substr(2,4);
+			var subB = check_string.substr(6,4);
+		    check.value = subA + "-" + subF + "-" + subB;
+	     }
+	     else{
+		    check.value = check_string;
+	     }
+	  }
+	  else if (len >= 2 && check_string.substr(0,2) != '02'){
+         if (len >= 4 && len <= 6){
+			var subA = check_string.substr(0,3);
+		    var subF = check_string.substr(3,3);
+		    check.value = subA + "-" + subF;
+	     }
+		 else if (len >= 7 && len <= 10){
+			var subA = check_string.substr(0,3);
+		    var subF = check_string.substr(3,3);
+			var subB = check_string.substr(6,4);
+		    check.value = subA + "-" + subF + "-" + subB;
+	     }
+	     else if (len >= 11){
+		    var subA = check_string.substr(0,3);
+		    var subF = check_string.substr(3,4);
+			var subB = check_string.substr(7,4);
+		    check.value = subA + "-" + subF + "-" + subB;
+	     }
+	     else{
+		    check.value = check_string;
+	     }
+	  }
+	  else{
+		  check.value = check_string;
+	  }
+   }
+
+$(function(){
+	$(".agree_btn").click(function(){
+		$(".agree").show()
+	})
+	$(".close").click(function(){
+		$(".agree").hide()
+	})
+})
